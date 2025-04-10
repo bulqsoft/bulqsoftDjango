@@ -1,3 +1,5 @@
+{% load cms_tags menu_tags sekizai_tags %} {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,13 +15,13 @@
 	<meta property="og:description"
 		content="Hub is a HTML template with high performance, and award-winning design collection.">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="./assets/images/common/og-image.jpg">
+	<meta property="og:image" content="{% static 'assets/images/common/og-image.jpg' %}' %}">
 
-	<link rel="stylesheet" href="./assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css">
-	<link rel="stylesheet" href="./assets/css/theme.min.css">
-	<link rel="stylesheet" href="./assets/css/utility.min.css">
-	<link rel="stylesheet" href="./assets/css/demo/asymmetric-agency/base.css">
-	<link rel="stylesheet" href="./assets/css/demo/asymmetric-agency/asymmetric-agency.css">
+	<link rel="stylesheet" href="{% static 'assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/utility.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/base.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/asymmetric-agency.css' %}">
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,12 +87,13 @@
 			height: 100%;
 		}
 	</Style>
-
+	{% render_block "css" %}
 </head>
 
 <body class="lqd-cc-outer-hidden" data-lqd-cc="true" data-mobile-nav-style="modern" data-mobile-nav-breakpoint="1199"
 	data-mobile-nav-scheme="dark" data-mobile-nav-trigger-alignment="right" data-mobile-header-scheme="custom"
 	data-mobile-logo-alignment="default">
+	{% cms_toolbar %}
 	<div id="wrap">
 
 		<div class="lqd-sticky-placeholder hidden"></div>
@@ -100,11 +103,11 @@
 				<div class="lqd-head-sec w-full flex items-stretch justify-between">
 					<div class="col-auto lqd-head-col justify-start">
 						<div class="module-logo navbar-brand-plain py-45">
-							<a class="navbar-brand" href="./index-asymmetric-agency.html">
+							<a class="navbar-brand" href="/">
 								<span class="navbar-brand-inner">
 									<img class="logo-light" width="52" height="23"
-										src="assets/img/bulqsoft-logo-white-01.svg" alt="BulqSoft">
-									<img class="logo-default" src="./assets/img/bulqsoft-logo.svg" alt="BulqSoft"
+										src="{% static 'assets/img/bulqsoft-logo-white-01.svg' %}" alt="BulqSoft">
+									<img class="logo-default" src="{% static 'assets/img/bulqsoft-logo.svg' %}" alt="BulqSoft"
 										style="width:120px;">
 								</span>
 							</a>
@@ -127,7 +130,7 @@
 									</li>
 
 									<li class="dropdown">
-										<a href="./page-asymmetric-agency-our-approach.html">
+										<a href="#">
 											<span>Products</span>
 											<span class="submenu-expander"></span>
 											<span class="link-icon right-icon">
@@ -139,26 +142,26 @@
 												<div class="col-md-4 sub-menu-first-section">
 													<ul>
 														<li>B2B & B2C Commerce</li>
-														<li><a class="dropdown-item" href="bulqe.html">Bulqe</a></li>
-														<li><a class="dropdown-item" href="intelpim.html">Intelpim</a>
+														<li><a class="dropdown-item" href="/bulqe/">Bulqe</a></li>
+														<li><a class="dropdown-item" href="/intelpim/">Intelpim</a>
 														</li>
-														<li><a class="dropdown-item" href="bulqs.html">Bulqs</a></li>
+														<li><a class="dropdown-item" href="/bulqs/">Bulqs</a></li>
 													</ul>
 												</div>
 												<div class="col-md-4 sub-menu-second-section">
 													<ul>
 														<li>Ecommerce Solution</li>
-														<li><a class="dropdown-item" href="idmc.html">IDMC (AI
+														<li><a class="dropdown-item" href="/idmc/">IDMC (AI
 																Solution)</a>
 														</li>
-														<li><a class="dropdown-item" href="adjunqy.html">Adjunqy</a>
+														<li><a class="dropdown-item" href="/adjunqy/">Adjunqy</a>
 														</li>
-														<li><a class="dropdown-item" href="bulqpay.html">BulqPay</a>
+														<li><a class="dropdown-item" href="/bulqpay/">BulqPay</a>
 														</li>
 													</ul>
 												</div>
 												<div class="col-md-4 sub-menu-third-section">
-													<img src="https://bulqsoft.com/assets/img/srvice-menu-ecommerce.jpg"
+													<img src="{% static 'assets/img/srvice-menu-ecommerce.jpg' %}"
 														alt="Description" class="img-fluid">
 												</div>
 											</div>
@@ -166,7 +169,7 @@
 									</li>
 
 									<li class="dropdown">
-										<a href="./page-asymmetric-agency-our-approach.html">
+										<a href="#">
 											<span>Services</span>
 											<span class="submenu-expander"></span>
 											<span class="link-icon right-icon">
@@ -177,25 +180,25 @@
 											<div class="row">
 												<div class="col-md-4 sub-menu-first-section">
 													<ul>
-														<li><a class="dropdown-item" href="pim.html">PIM Solutions</a>
+														<li><a class="dropdown-item" href="/pimsolutionservices/">PIM Solutions</a>
 														</li>
-														<li><a class="dropdown-item" href="erp.html">ERP & CRM
+														<li><a class="dropdown-item" href="/erpandcrmservices/">ERP & CRM
 																Solutions</a>
 														</li>
-														<li><a class="dropdown-item" href="ai.html">AI Integration</a>
+														<li><a class="dropdown-item" href="/ai-integration/">AI Integration</a>
 														</li>
 													</ul>
 												</div>
 												<div class="col-md-4 sub-menu-second-section">
 													<ul>
-														<li><a class="dropdown-item" href="web.html">Web Development</a>
+														<li><a class="dropdown-item" href="/websitedevelopment/">Web Development</a>
 														</li>
-														<li><a class="dropdown-item" href="concept.html">Concept
+														<li><a class="dropdown-item" href="/conceptdesign/">Concept
 																Design</a></li>
 													</ul>
 												</div>
 												<div class="col-md-4 sub-menu-third-section">
-													<img src="https://bulqsoft.com/assets/img/srvice-menu-ecommerce.jpg"
+													<img src="{% static 'assets/img/srvice-menu-ecommerce.jpg' %}"
 														alt="Description" class="img-fluid">
 												</div>
 											</div>
@@ -204,7 +207,7 @@
 
 
 									<li>
-										<a href="./about.html">
+										<a href="/about/">
 											About
 											<!-- <sup class="link-sup">02</sup> -->
 										</a>
@@ -253,11 +256,11 @@
 									<div class="w-full relative flex flex-wrap h-full justify-between -mr-15 -ml-15">
 										<div class="w-full flex flex-auto flex-col items-start justify-start px-15">
 											<div class="py-45 module-logo navbar-brand-plain">
-												<a class="navbar-brand" href="index.html" rel="home">
+												<a class="navbar-brand" href="/" rel="home">
 													<span class="navbar-brand-inner">
-														<img class="logo-light" src="./assets/img/bulqsoft-logo.svg"
+														<img class="logo-light" src="{% static 'assets/img/bulqsoft-logo.svg' %}"
 															alt="BulqSoft">
-														<img class="logo-default" src="./assets/img/bulqsoft-logo.svg"
+														<img class="logo-default" src="{% static 'assets/img/bulqsoft-logo.svg' %}"
 															alt="BulqSoft">
 													</span>
 												</a>
@@ -387,9 +390,9 @@
 							</span>
 						</span>
 					</button>
-					<a class="text-start navbar-brand" href="index.html">
+					<a class="text-start navbar-brand" href="/">
 						<span class="navbar-brand-inner justify-start">
-							<img class="logo-default" src="./assets/img/bulqsoft-logo.svg" alt="BulqSoft">
+							<img class="logo-default" src="{% static 'assets/img/bulqsoft-logo.svg' %}" alt="BulqSoft">
 						</span>
 					</a>
 				</div>
@@ -440,7 +443,7 @@
 		</header>
 
 		<main class="content bg-center-top bg-repeat z-2" id="lqd-site-content"
-			style="background-image: url(./assets/images/demo/asymmetric-agency/bg-lines.svg);">
+			style="background-image: url({% static 'assets/images/demo/asymmetric-agency/bg-lines.svg' %});">
 			<div id="lqd-contents-wrap">
 
 				<!-- Start Banner -->
@@ -528,22 +531,22 @@
 											<div class="lqd-vslider-images w-full h-full z-0 absolute top-0 left-0">
 												<figure class="absolute overflow-hidden">
 													<img class="absolute top-0 left-0 w-full h-full object-cover object-center"
-														src="./assets/images/demo/asymmetric-agency/banner-slider-1.jpg"
+														src="{% static 'assets/images/demo/asymmetric-agency/banner-slider-1.jpg' %}"
 														alt="PIM Solution">
 												</figure>
 												<figure class="absolute overflow-hidden">
 													<img class="absolute top-0 left-0 w-full h-full object-cover object-center"
-														src="./assets/images/demo/asymmetric-agency/banner-slider-2.jpeg"
+														src="{% static 'assets/images/demo/asymmetric-agency/banner-slider-2.jpeg' %}"
 														alt="AI Integration">
 												</figure>
 												<figure class="absolute overflow-hidden">
 													<img class="absolute top-0 left-0 w-full h-full object-cover object-center"
-														src="./assets/images/demo/asymmetric-agency/banner-slider-3.jpg"
+														src="{% static 'assets/images/demo/asymmetric-agency/banner-slider-3.jpg' %}"
 														alt="ERP Management">
 												</figure>
 												<figure class="absolute overflow-hidden">
 													<img class="absolute top-0 left-0 w-full h-full object-cover object-center"
-														src="./assets/images/demo/asymmetric-agency/banner-slider-4.jpg"
+														src="{% static 'assets/images/demo/asymmetric-agency/banner-slider-4.jpg' %}"
 														alt="Web Development">
 												</figure>
 											</div>
@@ -596,28 +599,28 @@
 							<div class="col col-md-2 col-12">
 								<div class="single-image">
 									<figure class="text-center">
-										<img width="80" height="11" src="./assets/img/bot-idmc-logo.svg" alt="clients">
+										<img width="80" height="11" src="{% static 'assets/img/bot-idmc-logo.svg' %}" alt="clients">
 									</figure>
 								</div>
 							</div>
 							<div class="col col-md-2 col-12">
 								<div class="single-image px-30">
 									<figure class="text-center">
-										<img width="80" height="11" src="./assets/img/bulqe-logo-1.svg" alt="clients">
+										<img width="80" height="11" src="{% static 'assets/img/bulqe-logo-1.svg' %}" alt="clients">
 									</figure>
 								</div>
 							</div>
 							<div class="col col-md-2 col-12">
 								<div class="single-image px-30">
 									<figure class="text-center">
-										<img width="121" height="23" src="./assets/img/intelpim-logo.svg" alt="clients">
+										<img width="121" height="23" src="{% static 'assets/img/intelpim-logo.svg' %}" alt="clients">
 									</figure>
 								</div>
 							</div>
 							<div class="col col-md-2 col-12">
 								<div class="single-image px-30">
 									<figure class="text-center">
-										<img width="83" height="25" src="./assets/img/bulqpay-logo-dark-01.svg"
+										<img width="83" height="25" src="{% static 'assets/img/bulqpay-logo-dark-01.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -626,7 +629,7 @@
 								<div class="single-image">
 									<figure class="text-center">
 										<img width="86" height="31"
-											src="./assets/images/demo/asymmetric-agency/client-yahoo.svg" alt="clients">
+											src="{% static 'assets/images/demo/asymmetric-agency/client-yahoo.svg' %}" alt="clients">
 									</figure>
 								</div>
 							</div>
@@ -634,7 +637,7 @@
 								<div class="single-image px-30">
 									<figure class="text-center">
 										<img width="85" height="25"
-											src="./assets/images/demo/asymmetric-agency/client-logitecg-5.svg"
+											src="{% static 'assets/images/demo/asymmetric-agency/client-logitecg-5.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -784,7 +787,7 @@
 											<p class="m-0">Let's chat</p>
 										</div>
 										<figure>
-											<img width="1283" height="979" src="./assets/img/faq-homepage.jpg"
+											<img width="1283" height="979" src="{% static 'assets/img/faq-homepage.jpg' %}"
 												alt="video cover">
 										</figure>
 										<div class="lqd-v-lines lqd-overlay flex flex justify-center">
@@ -1101,7 +1104,7 @@
 													data-parallax-options='{"addWillChange": true, "start": "top top", "end": "+=50%"}'>
 													<figure>
 														<img width="2080" height="1123"
-															src="./assets/images/demo/asymmetric-agency/scroll-banana.jpeg"
+															src="{% static 'assets/images/demo/asymmetric-agency/scroll-banana.jpeg' %}"
 															alt="bananas banner">
 													</figure>
 												</div>
@@ -1308,7 +1311,7 @@
 													<div class="lqd-pf-img mb-1em relative rounded-6 overflow-hidden">
 														<figure>
 															<img width="720" height="460"
-																src="./assets/img/shopify_logo.png" class="w-full"
+																src="{% static 'assets/img/shopify_logo.png' %}" class="w-full"
 																alt="portfilio">
 														</figure>
 														<span
@@ -1338,7 +1341,7 @@
 													<div class="lqd-pf-img mb-1em relative rounded-6 overflow-hidden">
 														<figure>
 															<img width="720" height="1000"
-																src="./assets/img/woocommerce_logo.png" class="w-full"
+																src="{% static 'assets/img/woocommerce_logo.png' %}" class="w-full"
 																alt="portfilio">
 														</figure>
 														<span
@@ -1368,7 +1371,7 @@
 													<div class="lqd-pf-img mb-1em relative rounded-6 overflow-hidden">
 														<figure>
 															<img width="720" height="460"
-																src="./assets/img/wix_logo.png" class="w-full"
+																src="{% static 'assets/img/wix_logo.png' %}" class="w-full"
 																alt="portfilio">
 														</figure>
 														<span
@@ -1398,7 +1401,7 @@
 													<div class="lqd-pf-img mb-1em relative rounded-6 overflow-hidden">
 														<figure>
 															<img width="720" height="1000"
-																src="./assets/img/lightspeed_logo.png" class="w-full"
+																src="{% static 'assets/img/lightspeed_logo.png' %}" class="w-full"
 																alt="portfilio">
 														</figure>
 														<span
@@ -1428,7 +1431,7 @@
 													<div class="lqd-pf-img mb-1em relative rounded-6 overflow-hidden">
 														<figure>
 															<img width="720" height="1000"
-																src="./assets/img/bigcommerce_logo.png" class="w-full"
+																src="{% static 'assets/img/bigcommerce_logo.png' %}" class="w-full"
 																alt="portfilio">
 														</figure>
 														<span
@@ -1458,7 +1461,7 @@
 													<div class="lqd-pf-img mb-1em relative rounded-6 overflow-hidden">
 														<figure>
 															<img width="720" height="462"
-																src="./assets/img/prestashop_logo.png" class="w-full"
+																src="{% static 'assets/img/prestashop_logo.png' %}" class="w-full"
 																alt="portfilio">
 														</figure>
 														<span
@@ -1488,7 +1491,7 @@
 													<div class="lqd-pf-img mb-1em relative rounded-6 overflow-hidden">
 														<figure>
 															<img width="720" height="462"
-																src="./assets/img/squarespace_logo.png" class="w-full"
+																src="{% static 'assets/img/squarespace_logo.png' %}" class="w-full"
 																alt="portfilio">
 														</figure>
 														<span
@@ -1518,7 +1521,7 @@
 													<div class="lqd-pf-img mb-1em relative rounded-6 overflow-hidden">
 														<figure>
 															<img width="720" height="462"
-																src="./assets/img/magento_logo.png" class="w-full"
+																src="{% static 'assets/img/magento_logo.png' %}" class="w-full"
 																alt="portfilio">
 														</figure>
 														<span
@@ -1582,7 +1585,7 @@
 												<div class="carousel-item-content flex-col">
 													<h3 class="mb-35 flex items-center">
 														<img class="mr-0/5em"
-															src="./assets/images/demo/asymmetric-agency/avatar-1.jpeg"
+															src="{% static 'assets/images/demo/asymmetric-agency/avatar-1.jpeg' %}"
 															alt="testimonials" width="76" height="76">
 														<span class="flex flex-col">
 															<span class="text-16 block">John Doe</span>
@@ -1603,7 +1606,7 @@
 												<div class="carousel-item-content flex-col">
 													<h3 class="mb-35 flex items-center">
 														<img class="mr-0/5em"
-															src="./assets/images/demo/asymmetric-agency/avatar-2.jpg"
+															src="{% static 'assets/images/demo/asymmetric-agency/avatar-2.jpg' %}"
 															alt="testimonials" width="76" height="76">
 														<span class="flex flex-col">
 															<span class="text-16 block">John Doe</span>
@@ -1624,7 +1627,7 @@
 												<div class="carousel-item-content flex-col">
 													<h3 class="mb-35 flex items-center">
 														<img class="mr-0/5em"
-															src="./assets/images/demo/asymmetric-agency/avatar-3.jpg"
+															src="{% static 'assets/images/demo/asymmetric-agency/avatar-3.jpg' %}"
 															alt="testimonials" width="76" height="76">
 														<span class="flex flex-col">
 															<span class="text-16 block">John Doe</span>
@@ -1645,7 +1648,7 @@
 												<div class="carousel-item-content flex-col">
 													<h3 class="mb-35 flex items-center">
 														<img class="mr-0/5em"
-															src="./assets/images/demo/asymmetric-agency/avatar-4.png"
+															src="{% static 'assets/images/demo/asymmetric-agency/avatar-4.png' %}"
 															alt="testimonials" width="76" height="76">
 														<span class="flex flex-col">
 															<span class="text-16 block">John Doe</span>
@@ -1691,7 +1694,7 @@
 									<div class="lqd-lp-img relative mb-1em overflow-hidden">
 										<figure class="mb-0 relative">
 											<img width="700" height="450"
-												src="./assets/images/demo/asymmetric-agency/blog-1.jpg" class="w-full"
+												src="{% static 'assets/images/demo/asymmetric-agency/blog-1.jpg' %}" class="w-full"
 												alt="Latest news in the office">
 										</figure>
 									</div>
@@ -1716,7 +1719,7 @@
 									<div class="lqd-lp-img relative mb-1em overflow-hidden">
 										<figure class="mb-0 relative">
 											<img width="700" height="450"
-												src="./assets/images/demo/asymmetric-agency/blog-2.jpg" class="w-full"
+												src="{% static 'assets/images/demo/asymmetric-agency/blog-2.jpg' %}" class="w-full"
 												alt="Investment trend monitor: Top trends in 2021">
 										</figure>
 									</div>
@@ -1741,7 +1744,7 @@
 									<div class="lqd-lp-img relative mb-1em overflow-hidden">
 										<figure class="mb-0 relative">
 											<img width="700" height="450"
-												src="./assets/images/demo/asymmetric-agency/blog-3.jpg" class="w-full"
+												src="{% static 'assets/images/demo/asymmetric-agency/blog-3.jpg' %}" class="w-full"
 												alt="Free advertising for your online business">
 										</figure>
 									</div>
@@ -1841,7 +1844,7 @@
 													<figure>
 														<div class="single-image">
 															<img width="725" height="465" alt="gallery"
-																src="./assets/images/demo/asymmetric-agency/carousel-image-1.jpg">
+																src="{% static 'assets/images/demo/asymmetric-agency/carousel-image-1.jpg' %}">
 														</div>
 													</figure>
 												</div>
@@ -1854,7 +1857,7 @@
 													<figure>
 														<div class="single-image">
 															<img width="725" height="465" alt="gallery"
-																src="./assets/images/demo/asymmetric-agency/carousel-image-2.jpg">
+																src="{% static 'assets/images/demo/asymmetric-agency/carousel-image-2.jpg' %}">
 														</div>
 													</figure>
 												</div>
@@ -1867,7 +1870,7 @@
 													<figure>
 														<div class="single-image">
 															<img width="725" height="465" alt="gallery"
-																src="./assets/images/demo/asymmetric-agency/carousel-image-3.jpg">
+																src="{% static 'assets/images/demo/asymmetric-agency/carousel-image-3.jpg' %}">
 														</div>
 													</figure>
 												</div>
@@ -1880,7 +1883,7 @@
 													<figure>
 														<div class="single-image">
 															<img width="725" height="465" alt="gallery"
-																src="./assets/images/demo/asymmetric-agency/carousel-image-4.jpg">
+																src="{% static 'assets/images/demo/asymmetric-agency/carousel-image-4.jpg' %}">
 														</div>
 													</figure>
 												</div>
@@ -1893,7 +1896,7 @@
 													<figure>
 														<div class="single-image">
 															<img width="725" height="465" alt="gallery"
-																src="./assets/images/demo/asymmetric-agency/carousel-image-2.jpg">
+																src="{% static 'assets/images/demo/asymmetric-agency/carousel-image-2.jpg' %}">
 														</div>
 													</figure>
 												</div>
@@ -1918,7 +1921,7 @@
 							<div class="lqd-imggrp-single mb-35">
 								<div class="lqd-imggrp-img-container">
 									<figure>
-										<img src="assets/img/bulqsoft-logo-white-01.svg" width="200" alt="hub logo">
+										<img src="{% static 'assets/img/bulqsoft-logo-white-01.svg' %}" width="200" alt="hub logo">
 									</figure>
 								</div>
 							</div>
@@ -1946,7 +1949,7 @@
 							<div class="lqd-imggrp-single">
 								<div class="lqd-imggrp-img-container mb-0">
 									<figure>
-										<img src="./assets/images/demo/asymmetric-agency/shape-hand.svg"
+										<img src="{% static 'assets/images/demo/asymmetric-agency/shape-hand.svg' %}"
 											alt="hand icon">
 									</figure>
 								</div>
@@ -1972,7 +1975,7 @@
 							<div class="lqd-imggrp-single pt-160 md:pt-0">
 								<div class="lqd-imggrp-img-container mb-0">
 									<figure>
-										<img src="assets/img/bulqsoft-logo-white-01.svg" width="100" alt="hub logo">
+										<img src="{% static 'assets/img/bulqsoft-logo-white-01.svg' %}" width="100" alt="hub logo">
 									</figure>
 								</div>
 							</div>
@@ -2024,7 +2027,7 @@
 			<div class="lqd-modal-head"></div>
 			<section
 				class="lqd-section lqd-modal-content flex items-center link-black bg-center bg-cover bg-norepeat h-100vh py-80 sm:h-auto"
-				style="background-image: url(./assets/images/common/modal-bg.jpeg);">
+				style="background-image: url({% static 'assets/images/common/modal-bg..jpeg' %});">
 				<div class="container flex items-center sm:p-0">
 					<div class="row items-center content-center h-full">
 						<div class="col col-12 col-md-6 mb-30">
@@ -2044,7 +2047,7 @@
 									<div class="screen-reader-response">
 										<p role="status" aria-live="polite" aria-atomic="true"></p>
 									</div>
-									<form action="./assets/php/mailer.php" method="post" class="lqd-cf-form"
+									<form action="{% static 'assets/php/mailer.php' %}" method="post" class="lqd-cf-form"
 										novalidate="novalidate" data-status="init">
 										<div class="row">
 											<div class="col col-md-6">
@@ -2172,24 +2175,24 @@
 
 
 
-	<script src="./assets/vendors/jquery.min.js"></script>
-	<script src="./assets/vendors/jquery-ui/jquery-ui.min.js"></script>
-	<script src="./assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-	<script src="./assets/vendors/gsap/minified/gsap.min.js"></script>
-	<script src="./assets/vendors/gsap/minified/ScrollTrigger.min.js"></script>
-	<script src="./assets/vendors/gsap/utils/SplitText.min.js"></script>
-	<script src="./assets/vendors/fastdom/fastdom.min.js"></script>
-	<script src="./assets/vendors/isotope/isotope.pkgd.min.js"></script>
-	<script src="./assets/vendors/isotope/packery-mode.pkgd.min.js"></script>
-	<script src="./assets/vendors/flickity/flickity.pkgd.min.js"></script>
-	<script src="./assets/vendors/lity/lity.min.js"></script>
-	<script src="./assets/vendors/particles.min.js"></script>
-	<script src="./assets/vendors/fontfaceobserver.js"></script>
-	<script src="./assets/vendors/fresco/js/fresco.js"></script>
-	<script src="./assets/vendors/tinycolor-min.js"></script>
-	<script src="./assets/js/liquid-gdpr.min.js"></script>
-	<script src="./assets/js/theme.min.js"></script>
-	<script src="./assets/js/liquid-ajax-contact-form.min.js"></script>
+	<script src="{% static 'assets/vendors/jquery.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/gsap/minified/gsap.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/gsap/minified/ScrollTrigger.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/gsap/utils/SplitText.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/fastdom/fastdom.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/isotope/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/isotope/packery-mode.pkgd.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/flickity/flickity.pkgd.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/lity/lity.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/particles.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/fontfaceobserver.js' %}"></script>
+	<script src="{% static 'assets/vendors/fresco/js/fresco.js' %}"></script>
+	<script src="{% static 'assets/vendors/tinycolor-min.js' %}"></script>
+	<script src="{% static 'assets/js/liquid-gdpr.min.js' %}"></script>
+	<script src="{% static 'assets/js/theme.min.js' %}"></script>
+	<script src="{% static 'assets/js/liquid-ajax-contact-form.min.js' %}"></script>
 
 	<!-- Start custom cursor -->
 	<div class="lqd-cc lqd-cc--inner fixed pointer-events-none"></div>
@@ -2268,6 +2271,8 @@
 				data-lity-close>&times;</button>
 		</div>
 	</div>
+
+	{% render_block "js" %}
 </body>
 
 </html>

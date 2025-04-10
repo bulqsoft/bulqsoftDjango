@@ -1,4 +1,5 @@
 {% load cms_tags menu_tags sekizai_tags %} {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,14 +21,14 @@
 	<link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/utility.min.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/base.css' %}">
-	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/asymmetric-agency-our-approach.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/asymmetric-agency-case-studies.css' %}">
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
-	<title>Concept Design - BulqSoft</title>
+	<title>About - Asymmetric Agency Pro</title>
 
 	<Style>
 		/* Styling the mega menu */
@@ -88,6 +89,7 @@
 	</Style>
 
 	{% render_block "css" %}
+
 </head>
 
 <body class="lqd-cc-outer-hidden" data-lqd-cc="true" data-mobile-nav-breakpoint="1199" data-mobile-nav-style="modern"
@@ -255,7 +257,7 @@
 								</span>
 								<span class="txt">Menu</span>
 							</button>
-							<div class="ld-module-dropdown collapse" aria-valuemin="0" aria-valuenow="0"
+							<div class="ld-module-dropdown collapse w-350" aria-valuemin="0" aria-valuenow="0"
 								aria-valuemax="100" id="header-sidedrawer" role="slider">
 								<div class="ld-sd-wrap">
 									<div class="w-full relative flex flex-wrap h-full justify-between -mr-15 -ml-15">
@@ -304,8 +306,8 @@
 										</div>
 										<div class="w-full flex flex-auto flex-col items-start justify-end px-15">
 											<div class="ld-fancy-heading">
-												<p class="mb-1/5em ld-fh-element text-black font-medium">
-													info@bulqsoft.com
+												<p class="mb-1/5em ld-fh-element">
+													<a href="#">info@bulqsoft.com</a>
 												</p>
 											</div>
 											<div class="ld-fancy-heading ">
@@ -361,9 +363,7 @@
 									<li class="my-10">
 										<a href="#" target="_blank" data-lqd-interactive-color="true"> Fb.</a>
 									</li>
-									<!-- <li class="my-10">
-										<a href="#" target="_blank" data-lqd-interactive-color="true"> Ig.</a>
-									</li> -->
+
 									<li class="my-10">
 										<a href="#" target="_blank" data-lqd-interactive-color="true"> Tw.</a>
 									</li>
@@ -488,466 +488,225 @@
 			</div>
 		</header>
 
-		<main class="content bg-center-top bg-repeat z-2 bg-white" id="lqd-site-content"
-			style="background-image: url({% static 'assets/images/demo/asymmetric-agency/bg-lines.svg' %});">
+		<main class="content bg-white" id="lqd-site-content">
 			<div id="lqd-contents-wrap">
 
 				<!-- Start Banner -->
-				<section class="lqd-section banner-our-approach bg-no-repeat bg-cover bg-center pt-150 pb-130"
-					id="banner"
-					style="background-image: url({% static 'assets/images/demo/asymmetric-agency/our-approach/banner.jpg' %});"
+				<section class="lqd-section banner-case-studies py-130 bg-no-repeat bg-cover bg-center" id="banner"
+					style="background-image: url({% static 'assets/images/demo/asymmetric-agency/case-studies/banner.jpg' %});"
 					data-section-luminosity="dark">
-					<div
-						class="liquid-row-overlay w-full h-full block absolute top-0 left-0 transition-all bg-black-20">
-					</div>
-					<span class="lqd-extra-cursor fixed"></span>
 					<div class="container">
 						<div class="row">
-							<div class="col col-12 text-center" data-custom-animations="true"
-								data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"y":120,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
-								<h1 class="ld-fh-element relative mb-0 text-120 font-bold leading-1em text-white">
-									Concept Design
-								</h1>
+							<div class="col col-12 text-center">
+								<h1 class="ld-fh-element lqd-highlight-underline lqd-highlight-grow-left text-decoration-default lqd-split-chars mb-0 text-120 text-white"
+									data-split-text="true" data-split-options='{"type":"chars, words"}'
+									data-custom-animations="true"
+									data-ca-options='{"triggerHandler":"inview","animationTarget":".lqd-chars > .split-inner","duration":"1800","delay":"80","ease":"power4.out","direction":"forward","initValues":{"opacity":0},"animations":{"opacity":1}}'>
+									About</h1>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!-- End Banner -->
 
-				<!-- Start Services -->
-				<section class="lqd-section services pt-65 pb-50" id="services" data-section-luminosity="light">
+				<!-- Start Section Navigation -->
+				<section class="lqd-section section-navigation py-30" data-section-luminosity="light">
 					<div class="container">
-						<div class="row items-center">
+						<div class="row">
+							<div class="col col-12">
+								<div class="lqd-fancy-menu lqd-custom-menu text-center lqd-menu-td-none lqd-sticky-menu lqd-sticky-menu-default lqd-custom-menu-expand-items absolute bg-white border-bottom border-black-10"
+									data-pin="true"
+									data-pin-options='{"start": "top+=1 top", "offset": "[data-sticky-header] .lqd-head-sec-wrap:not(.lqd-hide-onstuck), [data-sticky-header] .lqd-mobile-sec, #wpadminbar", "duration": "last-link"}'
+									data-move-element='{"target": "section"}'>
+									<span
+										class="lqd-fancy-menu lqd-custom-menu text-center lqd-menu-td-none lqd-sticky-menu lqd-sticky-menu-default lqd-custom-menu-mobile-collapsible lqd-custom-menu-expand-items items-center py-1em px-1/5em hidden md:flex"
+										data-bs-target="#section-nav" data-bs-toggle="collapse" data-ld-toggle="true"
+										data-toggle-options='{"closeOnOutsideClick": {"ifNotIn": "#lqd-site-content"} }'>
+										<span class="toggle-label"> Open Menu </span>
+										<span class="expander-icon ml-auto lh-1 inline-flex">
+											<i class="lqd-icn-ess icon-ion-ios-arrow-down"></i>
+										</span>
+									</span>
+									<ul class="reset-ul inline-nav flex items-center link-black link-15 mx-auto bg-white top-100percent left-0 module-navigation md:absolute md:hidden"
+										id="section-nav" data-localscroll="true"
+										data-localscroll-options='{"itemsSelector":"> li > a","trackWindowScroll":true,"includeParentAsOffset":true,"offsetElements":"[data-sticky-header] .lqd-head-sec-wrap:not(.lqd-hide-onstuck), #wpadminbar"}'>
+										<li class="p-1em justify-center">
+											<a class="leading-1/75em justify-center" href="#services" target="_blank">
+												<span class="link-icon right-icon text-left">
+													<i class="lqd-icn-ess icon-ion-ios-arrow-down"></i>
+												</span>
+												<span>Our Services</span>
+											</a>
+											<span
+												class="lqd-scrl-indc lqd-scrl-indc-h lqd-scrl-indc-scale w-full flex absolute bottom-0 left-0 whitespace-nowrap"
+												data-lqd-scroll-indicator="true"
+												data-scrl-indc-options='{"scrollingTarget": "#services", "dir": "x", "scale": true, "start": "top bottom", "end": "top top-=99.65%"}'>
+												<span class="lqd-scrl-indc-inner h-full flex items-center">
+													<span class="lqd-scrl-indc-line relative bg-black-10">
+														<span class="lqd-scrl-indc-el absolute"></span>
+													</span>
+												</span>
+											</span>
+										</li>
+										<!-- <li class="p-1em justify-center">
+											<a class="leading-1/75em justify-center" href="#case-studies"
+												target="_blank">
+												<span class="link-icon right-icon text-left">
+													<i class="lqd-icn-ess icon-ion-ios-arrow-down"></i>
+												</span>
+												<span>About</span>
+											</a>
+											<span
+												class="lqd-scrl-indc lqd-scrl-indc-h lqd-scrl-indc-scale w-full flex absolute bottom-0 left-0 whitespace-nowrap"
+												data-lqd-scroll-indicator="true"
+												data-scrl-indc-options='{"scrollingTarget": "#case-studies", "dir": "x", "scale": true, "start": "top bottom", "end": "top top-=99.65%"}'>
+												<span class="lqd-scrl-indc-inner h-full flex items-center">
+													<span class="lqd-scrl-indc-line relative bg-black-10">
+														<span class="lqd-scrl-indc-el absolute"></span>
+													</span>
+												</span>
+											</span>
+										</li> -->
+										<li class="p-1em justify-center">
+											<a class="leading-1/75em justify-center" href="#process" target="_blank">
+												<span class="link-icon right-icon text-left">
+													<i class="lqd-icn-ess icon-ion-ios-arrow-down"></i>
+												</span>
+												<span>The Process</span>
+											</a>
+											<span
+												class="lqd-scrl-indc lqd-scrl-indc-h lqd-scrl-indc-scale w-full flex absolute bottom-0 left-0 whitespace-nowrap"
+												data-lqd-scroll-indicator="true"
+												data-scrl-indc-options='{"scrollingTarget": "#process", "dir": "x", "scale": true, "start": "top bottom", "end": "top top-=99.65%"}'>
+												<span class="lqd-scrl-indc-inner h-full flex items-center">
+													<span class="lqd-scrl-indc-line relative bg-black-10">
+														<span class="lqd-scrl-indc-el absolute"></span>
+													</span>
+												</span>
+											</span>
+										</li>
+										<li class="p-1em justify-center">
+											<a class="leading-1/75em justify-center" href="#contact" target="_blank">
+												<span class="link-icon right-icon text-left">
+													<i class="lqd-icn-ess icon-ion-ios-arrow-down"></i>
+												</span>
+												<span>Contact Us</span>
+											</a>
+											<span
+												class="lqd-scrl-indc lqd-scrl-indc-h lqd-scrl-indc-scale w-full flex absolute bottom-0 left-0 whitespace-nowrap"
+												data-lqd-scroll-indicator="true"
+												data-scrl-indc-options='{"scrollingTarget": "#contact", "dir": "x", "scale": true, "start": "top bottom", "end": "top top-=99.65%"}'>
+												<span class="lqd-scrl-indc-inner h-full flex items-center">
+													<span class="lqd-scrl-indc-line relative bg-black-10">
+														<span class="lqd-scrl-indc-el absolute"></span>
+													</span>
+												</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End Section Navigation -->
+
+				<!-- Start Services Accordion -->
+				<section class="lqd-section services-accordion pt-65 pb-35" id="services"
+					data-section-luminosity="light">
+					<div class="container">
+						<div class="row">
 							<div class="col col-12 col-md-6 text-start module-first" data-custom-animations="true"
 								data-ca-options='{"triggerHandler":"inview","animationTarget":"h6, h2, p,.lqd-counter, figure","duration":"1800","startDelay":"800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"y":60,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
-								<div class="flex flex-col items-start module-title">
+								<div class="flex flex-col items-start">
 									<h6
 										class="ld-fh-element py-5 px-15 mb-1/25em bg-red-500 rounded-100 text-13 uppercase font-semibold tracking-0/1em text-white">
-										Services</h6>
-									<h2 class="ld-fh-element mb-0 text-28 font-medium leading-1/15em">Building a
-										blueprint for success</h2>
-								</div>
-							</div>
-							<div class="col col-12 col-md-6 col-lg-5 offset-lg-1" data-custom-animations="true"
-								data-ca-options='{"triggerHandler":"inview","animationTarget":"p","duration":"1800","startDelay":"1100","delay":"180","ease":"power4.out","direction":"forward","initValues":{"y":30,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
-								<p class="ld-fh-element mb-0 text-16 leading-1/6em text-black">
-									Creating a design idea just for your business, we make sure it fits your goals and
-									helps you succeed.
-								</p>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End Services -->
-
-				<!-- Start Icon Box -->
-				<section class="lqd-section icon-box pt-25 pb-15 sm:pb-0" data-custom-animations="true"
-					data-ca-options='{"triggerHandler":"inview","animationTarget":"h6, h2, p, .iconbox","duration":"1800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"x":30,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"x":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'
-					data-section-luminosity="light">
-					<div class="container">
-						<div class="row">
-							<div class="col col-6 col-lg-1">
-							</div>
-							<div class="col col-6 col-lg-5">
-								<div class="iconbox text-align-default iconbox-heading-xs relative flex-col items-center justify-center text-center border-right border-black-10 md:border-0"
-									data-animate-icon="true">
-									<div class="iconbox-icon-wrap">
-										<span class="iconbox-icon-container mb-25 text-40 text-primary">
-											<i class="lqd-icn-ess icon-lqd-target"></i>
-										</span>
-									</div>
-									<div class="contents">
-										<h3 class="mb-15 text-18 leading-1/5em">Visionary Blueprint</h3>
-										<p>
-											<span class="text-15 text-gray-500">A concept design isn't just about
-												aesthetics. It's a visionary blueprint that embodies the essence of your
-												brand. This preliminary phase captures your business's core values and
-												aspirations, setting the stage for a design.</span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col col-6 col-lg-5">
-								<div class="iconbox text-align-default iconbox-heading-xs relative flex-col items-center justify-center text-center border-right border-black-10 md:border-0"
-									data-animate-icon="true">
-									<div class="iconbox-icon-wrap">
-										<span class="iconbox-icon-container mb-25 text-40 text-primary">
-											<i class="lqd-icn-ess icon-lqd-cogs"></i>
-										</span>
-									</div>
-									<div class="contents">
-										<h3 class="mb-15 text-18 leading-1/5em">Strategic Foundation</h3>
-										<p>
-											<span class="text-15 text-gray-500">Beyond just visual appeal, a
-												well-crafted concept design provides a strategic foundation for all
-												future branding and marketing endeavors. It ensures coherence and
-												consistency, to be easily recognized and
-												remembered.</span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col col-6 col-lg-1">
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End Icon Box -->
-
-				<!-- Start What We Do -->
-				<section class="lqd-section what-we-do py-10" data-custom-animations="true"
-					data-ca-options='{"triggerHandler":"inview","animationTarget":".col","duration":"1800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"y":35,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'
-					data-section-luminosity="light">
-					<div class="container">
-						<div class="row">
-							<div class="col col-12">
-								<div
-									class="w-full relative flex flex-col flex-grow-1 pt-40 pb-10 mb-50 border-bottom border-black module-line">
-									<div class="container-fluid p-0">
-										<div class="row items-center">
-											<div class="col col-2 animation-element">
-												<div class="w-30percent relative flex border-top border-black-50"></div>
-											</div>
-											<div class="col col-8 animation-element">
-												<h6
-													class="ld-fh-element mb-0/5em text-12 uppercase tracking-0/01em font-normal text-black">
-													Features</h6>
-											</div>
-											<div class="col col-2 text-end sm:text-start animation-element">
-												<h6 class="ld-fh-element mb-0/5em text-12 font-normal"> 01</h6>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col col-12 col-md-6">
-								<div class="lqd-imggrp-container relative mb-2em transition-all"
-									data-custom-animations="true"
-									data-ca-options='{"triggerHandler":"inview","animationTarget":".lqd-imggrp-single","duration":"1800","delay":"160","ease":"power4.out","direction":"forward","initValues":{"y":65,"scaleY":1.1,"opacity":0},"animations":{"y":0,"scaleY":1,"opacity":1}}'>
-									<div class="lqd-imggrp-inner flex flex-wrap justify-center">
-										<div class="lqd-imggrp-single block absolute top-10percent left-0"
-											data-shadow-style="4">
-											<div class="lqd-imggrp-img-container">
-												<figure>
-													<img width="205" height="218"
-														src="{% static 'assets/images/demo/asymmetric-agency/our-approach/what-we-do-1.jpg' %}"
-														alt="what we do">
-												</figure>
-											</div>
-										</div>
-										<div class="lqd-imggrp-single block absolute top-5percent right-0"
-											data-shadow-style="4">
-											<div class="lqd-imggrp-img-container">
-												<figure>
-													<img width="230" height="269"
-														src="{% static 'assets/images/demo/asymmetric-agency/our-approach/what-we-do-3.jpg' %}"
-														alt="what we do">
-												</figure>
-											</div>
-										</div>
-										<div class="lqd-imggrp-single block relative mt-140 module-img"
-											data-shadow-style="4">
-											<div class="lqd-imggrp-img-container">
-												<figure>
-													<img width="240" height="311"
-														src="{% static 'assets/images/demo/asymmetric-agency/our-approach/what-we-do-2.jpg' %}"
-														alt="what we do">
-												</figure>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col col-12 col-md-6">
-								<div
-									class="module-content relative flex flex-col items-start pr-5percent pl-15percent lg:pr-0">
-									<p class="ld-fh-element mb-0/5em text-12 uppercase tracking-0/05em text-black">Why
-										Choose Bulqsoft?</p>
-									<h2 class="ld-fh-element mb-0/4em text-65 leading-0/8em text-black text-init">
-										Concept to the forefront</h2>
-									<p class="ld-fh-element mb-2em text-16 leading-1/6em text-black"> Bridging the gap
-										between concept and creation</p>
-									<div class="w-full relative">
-										<div class="flex flex-wrap -mx-15 mb-50 md:mb-0">
-											<div class="w-50percent px-15 sm:w-full">
-												<div class="one-bullet-list mb-1em">
-													<ul class="reset-ul module-list">
-														<li class="flex items-center mb-0/5em text-black"> Customized
-															Understanding</li>
-														<li class="flex items-center mb-0/5em text-black">
-															Targeted Development
-														</li>
-														<li class="flex items-center mb-0/5em text-black">
-															User-Friendly Designs
-
-
-														</li>
-														<li class="flex items-center mb-0/5em text-black">
-															Tailor-Made Solutions
-
-														</li>
-
-
-													</ul>
-												</div>
-											</div>
-											<div class="w-50percent px-15 sm:w-full">
-												<div class="one-bullet-list mb-1em">
-													<ul class="reset-ul module-list">
-														<li class="flex items-center mb-0/5em text-black">The Power of
-															Concept</li>
-														<li class="flex items-center mb-0/5em text-black">Scalability
-														</li>
-														<li class="flex items-center mb-0/5em text-black">Flexibility
-														</li>
-														<li class="flex items-center mb-0/5em text-black">
-															Growth-Oriented
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End What We Do -->
-
-				<!-- Start Steps -->
-				<section class="lqd-section steps pt-40 pb-90" data-custom-animations="true"
-					data-ca-options='{"triggerHandler":"inview","animationTarget":".col","duration":"1800","delay":"160","ease":"power4.out","direction":"forward","initValues":{"x":30,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"x":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'
-					data-section-luminosity="light">
-					<div class="container">
-						<div class="row">
-							<div class="col col-12 col-md-4">
-								<div class="w-full relative flex flex-col flex-grow-1 pr-25percent mb-15 lg:pr-0">
-									<div
-										class="ld-fancy-heading ld-fh-pos-abs lqd-exclude-parent-ca ld-fh-outline ld-fh-outline-static relative z-0">
-										<p
-											class="ld-fh-element absolute -top-0/1em right-0 mb-0/5em text-192 leading-1em text-transparent">
-											<span class="ld-fh-txt-outline">1</span>
-											1
-										</p>
-									</div>
-									<p
-										class="ld-fh-element relative mb-0/5em text-14 uppercase tracking-0/1em text-black">
-										STEP 1</p>
-									<h2 class="ld-fh-element relative mb-0/7em leading-1/1em font-normal"> Understand
-									</h2>
-									<p class="ld-fh-element relative mb-0/5em text-16 leading-1/6em text-black">
-										Gathering information about the client's business, goals, target audience, and
-										competitors. Identifying
-										areas for improvement.</p>
-								</div>
-							</div>
-							<div class="col col-12 col-md-4">
-								<div class="w-full relative flex flex-col flex-grow-1 pr-25percent mb-15 lg:pr-0">
-									<div
-										class="ld-fancy-heading ld-fh-pos-abs lqd-exclude-parent-ca ld-fh-outline ld-fh-outline-static relative z-0">
-										<p
-											class="ld-fh-element absolute -top-0/1em right-0 mb-0/5em text-192 leading-1em text-transparent">
-											<span class="ld-fh-txt-outline">2</span>
-											2
-										</p>
-									</div>
-									<p
-										class="ld-fh-element relative mb-0/5em text-14 uppercase tracking-0/1em text-black">
-										STEP 2</p>
-									<h2 class="ld-fh-element relative mb-0/7em leading-1/1em font-normal"> Design
-									</h2>
-									<p class="ld-fh-element relative mb-0/5em text-16 leading-1/6em text-black">
-										Creating a concept based on the information gathered in step 1. Presenting the
-										concept to the client and getting feedback.
+										About us</h6>
+									<h2 class="ld-fh-element mb-0/85em text-28 font-medium leading-1/15em"> BulqSoft is
+										a web development and ecommerce platform</h2>
+									<p class="ld-fh-element mb-1em text-14 text-black mt-15">
+										Our aim is to provide our clients with the best possible service and support,
+										while constantly innovating and improving our products and services to stay
+										ahead of the curve.
 									</p>
 								</div>
-							</div>
-							<div class="col col-12 col-md-4">
-								<div class="w-full relative flex flex-col flex-grow-1 pr-25percent mb-15 lg:pr-0">
-									<div
-										class="ld-fancy-heading ld-fh-pos-abs lqd-exclude-parent-ca ld-fh-outline ld-fh-outline-static relative z-0">
-										<p
-											class="ld-fh-element absolute -top-0/1em right-0 mb-0/5em text-192 leading-1em text-transparent">
-											<span class="ld-fh-txt-outline">3</span>
-											3
-										</p>
-									</div>
-									<p
-										class="ld-fh-element relative mb-0/5em text-14 uppercase tracking-0/1em text-black">
-										STEP 3</p>
-									<h2 class="ld-fh-element relative mb-0/7em leading-1/1em font-normal"> Implement
-									</h2>
-									<p class="ld-fh-element relative mb-0/5em text-16 leading-1/6em text-black">
-										Developing the website based on the final concept, with latest technologies and
-										best practices. Testing the system.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End Steps -->
-
-				<!-- Start Our Vision -->
-				<section class="lqd-section our-vision bg-no-repeat bg-cover bg-center py-130"
-					style="background-image: url({% static 'assets/images/demo/asymmetric-agency/our-approach/our-vision.jpg' %});">
-					<div class="container">
-						<div class="row">
-							<div class="col col-12 col-md-8 col-lg-6 offset-md-4 offset-lg-6" data-parallax="true"
-								data-parallax-from='{"y":100}' data-parallax-to='{"y":-100}'
-								data-parallax-options='{"ease":"linear","start":"top bottom"}'>
-								<div class="module-content relative pt-40 pr-35 pb-30 pl-50 bg-white-80">
-									<div class="flex flex-wrap items-center -mx-15">
-										<div class="w-60percent px-15 sm:w-full">
-											<h6
-												class="ld-fh-element py-5 px-15 mb-1/5em bg-red-300 rounded-100 text-10 uppercase font-normal tracking-0/1em text-white">
-												Our vision</h6>
-											<p class="ld-fh-element mb-2em text-16 leading-1/6em text-black"> IMARC
-												Group predicts the ecommerce market will attain a value of US$ 70.9
-												Trillion by 2028. In response to this potential growth, we have crafted
-												an e-commerce ecosystem designed to enhance revenue for everybody.</p>
-											<a href="/about/"
-												class="btn btn-hover-reveal btn-has-label justify-end overflow-visible pb-20 pl-10 border-left text-13 leading-1em text-black hover:text-primary">
-												<span class="btn-txt" data-text="Meet the Team">Meet the Team</span>
-												<span class="btn-icon">
-													<i class="lqd-icn-ess icon-md-arrow-forward"></i>
-												</span>
-											</a>
+								<!-- <div class="flex flex-wrap -mx-15">
+									<div class="w-40percent flex flex-col px-15 sm:w-full">
+										<div
+											class="lqd-counter lqd-counter-default mb-0 z-1 text-black hover:inner-text-primary">
+											<div class="lqd-counter-element mb-5 text-50 font-bold"
+												data-enable-counter="true"
+												data-counter-options='{"targetNumber":"9.81"}'>
+												<span class="transition-color inner-text-primary">9.81</span>
+											</div>
+											<span class="lqd-counter-text lqd-text-bottom">TrustPilot Review</span>
 										</div>
-										<div class="w-40percent text-center px-15 sm:w-full">
-											<div class="lqd-counter lqd-counter-default mb-0 text-black text-end">
-												<div class="lqd-counter-element relative mb-0 text-240 font-bold"
-													data-enable-counter="true"
-													data-counter-options='{"targetNumber":"6"}'>
-													<span>6</span>
-												</div>
-											</div>
-											<p
-												class="ld-fh-element relative -top-1/5em mb-0/5em text-16 leading-1em text-black">
-												Different Platforms</p>
-										</div>
+										<figure>
+											<img src="{% static 'assets/images/demo/asymmetric-agency/shape-stars.svg' %}"
+												alt="stars">
+										</figure>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End Our Vision -->
-
-
-				<!-- Start About Accordion -->
-				<section class="lqd-section about-accordion py-10" data-custom-animations="true"
-					data-ca-options='{"triggerHandler":"inview","animationTarget":".col","duration":"1800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"y":35,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
-					<div class="container">
-						<div class="row">
-							<div class="col col-12">
-								<div
-									class="w-full relative flex flex-col flex-grow-1 pt-40 pb-10 mb-50 border-bottom border-black module-line">
-									<div class="container-fluid p-0">
-										<div class="row items-center">
-											<div class="col col-2">
-												<div class="w-30percent relative flex border-top border-black-50"></div>
+									<div class="w-50percent flex flex-col px-15 sm:w-full">
+										<div
+											class="lqd-counter lqd-counter-default mb-0 z-1 text-black hover:inner-text-primary">
+											<div class="lqd-counter-element mb-5 text-50 font-bold"
+												data-enable-counter="true"
+												data-counter-options='{"targetNumber":"1k+"}'>
+												<span class="transition-color inner-text-primary">1k+</span>
 											</div>
-											<div class="col col-8">
-												<h6
-													class="ld-fh-element mb-0/5em text-12 uppercase tracking-0/01em font-normal text-black">
-													Utility</h6>
-											</div>
-											<div class="col col-2 text-end sm:text-start">
-												<h6 class="ld-fh-element mb-0/5em text-12 font-normal"> 03</h6>
-											</div>
+											<span class="lqd-counter-text lqd-text-bottom">Web and mobile</span>
 										</div>
+										<p class="ld-fh-element mb-1em text-black"> Projects Completed</p>
 									</div>
-								</div>
-							</div>
-							<div class="col col-12 col-md-6">
-								<h2 class="ld-fh-element mb-0/4em text-58 leading-0/8em text-init"> Ecommerce Solutions
-								</h2>
-								<p
-									class="ld-fh-element mb-2em ml-40percent text-15 leading-1/3em text-black-70 md:ml-0">
-									Bulqsoft Provides a Complete and Comprehensive E-commerce Solution</p>
+								</div> -->
 							</div>
 							<div class="col col-12 col-md-6" data-custom-animations="true"
-								data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1800","delay":"160","ease":"power4.out","direction":"forward","initValues":{"y":30,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
-								<div
-									class="w-full relative flex flex-col flex-grow-1 transition-all pl-15percent pr-5percent lg:px-0">
-									<div class="accordion accordion-md mb-2em" id="accordion-services" role="tablist"
+								data-ca-options='{"triggerHandler":"inview","animationTarget":".accordion-item","duration":"1800","startDelay":"1100","delay":"180","ease":"power4.out","direction":"forward","initValues":{"y":30,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
+								<div class="flex pl-5percent lg:pl-0">
+									<div class="accordion accordion-xs mb-2em" id="accordion-services" role="tablist"
 										aria-multiselectable="true">
-										<div class="accordion-item panel">
+										<div class="accordion-item panel active mb-20">
 											<div class="accordion-heading" role="tab" id="heading-lqd-item-1"
 												data-id="lqd-item-1">
-												<h4 class="accordion-title text-17" data-bs-controls="lqd-item-1">
-													<a class="border-bottom border-black pr-30"
-														data-bs-toggle="collapse" data-bs-parent="#accordion-services"
-														href="#lqd-item-1" aria-expanded="true"
-														aria-controls="lqd-item-1">
-														<span>CMS
-															integration </span>
+												<h4 class="accordion-title text-20 leading-1/15em"
+													data-bs-controls="lqd-item-1">
+													<a class="pr-30" data-bs-toggle="collapse"
+														data-bs-parent="#accordion-services" href="#lqd-item-1"
+														aria-expanded="true" aria-controls="lqd-item-1">
+														<span>Website development </span>
 														<span
-															class="accordion-expander absolute right-0 text-16 text-inherit text-black">
+															class="accordion-expander text-16 text-inherit absolute right-30">
 															<i class="lqd-icn-ess icon-ion-ios-add"></i>
 															<i class="lqd-icn-ess icon-ion-ios-remove"></i>
 														</span>
 													</a>
 												</h4>
 											</div>
-											<div id="lqd-item-1" class="accordion-collapse collapse" role="tabpanel"
-												aria-labelledby="heading-lqd-item-1"
+											<div id="lqd-item-1" class="accordion-collapse collapse show"
+												role="tabpanel" aria-labelledby="heading-lqd-item-1"
 												data-bs-parent="#accordion-services">
 												<div class="accordion-content">
 													<div class="ld-fancy-heading">
-														<ul class="reset-ul">
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Big Commerce
-																</span>
-															</li>
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Wix
-																</span>
-															</li>
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Shopify
-																</span>
-															</li>
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Woo commerce
-																</span>
-															</li>
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Magento
-																</span>
-															</li>
-														</ul>
+														<p
+															class="ld-fh-element mb-0 lqd-highlight-underline lqd-highlight-grow-left text-decoration-default text-16 leading-1/5em">
+															We offer custom website development services to help you
+															create the perfect website for your business.
+														</p>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="accordion-item panel">
+										<div class="accordion-item panel mb-20">
 											<div class="accordion-heading" role="tab" id="heading-lqd-item-2"
 												data-id="lqd-item-2">
-												<h4 class="accordion-title text-17" data-bs-controls="lqd-item-2">
-													<a class="border-bottom border-black collapsed pr-30"
-														data-bs-toggle="collapse" data-bs-parent="#accordion-services"
-														href="#lqd-item-2" aria-expanded="false"
-														aria-controls="lqd-item-2">
-														<span>Convenience</span>
+												<h4 class="accordion-title text-20 leading-1/15em"
+													data-bs-controls="lqd-item-2">
+													<a class="collapsed pr-30" data-bs-toggle="collapse"
+														data-bs-parent="#accordion-services" href="#lqd-item-2"
+														aria-expanded="false" aria-controls="lqd-item-2">
+														<span>E-commerce solutions</span>
 														<span
-															class="accordion-expander absolute right-0 text-16 text-inherit text-black">
+															class="accordion-expander text-16 text-inherit absolute right-30">
 															<i class="lqd-icn-ess icon-ion-ios-add"></i>
 															<i class="lqd-icn-ess icon-ion-ios-remove"></i>
 														</span>
@@ -959,40 +718,26 @@
 												data-bs-parent="#accordion-services">
 												<div class="accordion-content">
 													<div class="ld-fancy-heading">
-														<ul class="reset-ul">
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	With our advanced PIM integration, businesses can
-																	easily expand their reach.
-																</span>
-															</li>
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Manage their e-commerce operations efficiently. All
-																	from one single location.
-																</span>
-															</li>
-														</ul>
+														<p
+															class="ld-fh-element mb-0 lqd-highlight-underline lqd-highlight-grow-left text-decoration-default text-16 leading-1/5em">
+															Providing high-quality web development and e-commerce
+															services that meet the unique needs of each client
+														</p>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="accordion-item panel">
+										<div class="accordion-item panel mb-20">
 											<div class="accordion-heading" role="tab" id="heading-lqd-item-3"
 												data-id="lqd-item-3">
-												<h4 class="accordion-title text-17" data-bs-controls="lqd-item-3">
-													<a class="border-bottom border-black collapsed pr-30"
-														data-bs-toggle="collapse" data-bs-parent="#accordion-services"
-														href="#lqd-item-3" aria-expanded="false"
-														aria-controls="lqd-item-3">
-														<span>Headless
-															commerce</span>
+												<h4 class="accordion-title text-20 leading-1/15em"
+													data-bs-controls="lqd-item-3">
+													<a class="collapsed pr-30" data-bs-toggle="collapse"
+														data-bs-parent="#accordion-services" href="#lqd-item-3"
+														aria-expanded="false" aria-controls="lqd-item-3">
+														<span>Product management</span>
 														<span
-															class="accordion-expander absolute right-0 text-16 text-inherit text-black">
+															class="accordion-expander text-16 text-inherit absolute right-30">
 															<i class="lqd-icn-ess icon-ion-ios-add"></i>
 															<i class="lqd-icn-ess icon-ion-ios-remove"></i>
 														</span>
@@ -1004,36 +749,182 @@
 												data-bs-parent="#accordion-services">
 												<div class="accordion-content">
 													<div class="ld-fancy-heading">
-														<ul class="reset-ul">
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Flexibility and Customization.
-																</span>
-															</li>
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Omnichannel Consistency.
-																</span>
-															</li>
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Faster Time-to-Market.
-																</span>
-															</li>
-															<li
-																class="w-full relative flex items-center flex-wrap mb-5">
-																<span class="iconbox-icon-container mb-15 text-15">
-																	<i class="lqd-icn-ess icon-lqd-check"></i> &nbsp;
-																	Improved Performance and Scalability.
-																</span>
-															</li>
-														</ul>
+														<p
+															class="ld-fh-element mb-0 lqd-highlight-underline lqd-highlight-grow-left text-decoration-default text-16 leading-1/5em">
+															Providing product management and marketing services to help
+															businesses increase their visibility and reach
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End Services Accordion -->
+
+				<!-- Start Services -->
+				<section class="lqd-section services pt-35 pb-40 sm:pt-0" data-custom-animations="true"
+					data-ca-options='{"triggerHandler":"inview","animationTarget":"h6, h2, p","duration":"1800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"x":30,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"x":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'>
+					<div class="container">
+						<div class="row items-end">
+							<div class="col col-12 col-xl-5 col-md-6">
+								<h6
+									class="ld-fh-element mb-1/2em py-5 px-15 tracking-0/1em font-semibold text-13 text-black bg-gray-200 rounded-100 uppercase">
+									Services</h6>
+								<h2 class="ld-fh-element mb-0/85em font-medium leading-1/15em text-28"> With a team of
+									experienced developers and designers, we offer a wide range of services</h2>
+							</div>
+							<div class="col col-12 offset-xl-2 col-md-5">
+								<p class="ld-fh-element mb-1/25em leading-1/5em text-16 text-black"> Bulqsoft, renowned
+									as a premier web development and e-commerce platform, is dedicated to crafting the
+									online presence of businesses across the digital world. With a commitment
+									to innovation and excellence, we serve enterprises of all sizes.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End Services -->
+
+				<!-- Start About Row -->
+				<!-- <section class="lqd-section case-studies-row" id="case-studies" data-section-luminosity="light"
+					data-custom-animations="true"
+					data-ca-options='{"triggerHandler":"inview","animationTarget":".animation-element","duration":"1800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"x":60,"scaleX":0.85,"scaleY":0.85,"rotationY":35,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"x":0,"scaleX":1,"scaleY":1,"rotationY":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"-180px","opacity":1}}'>
+					<div class="container-fluid p-0">
+						<div class="row m-0">
+							<div class="col col-12 col-md-6 col-lg-3 p-0 animation-element">
+								<div class="lqd-fb round h-pt-125 lqd-fb-style-6 relative rounded-4"
+									data-lqd-zindex="true">
+									<div class="lqd-fb-inner lqd-overlay">
+										<div class="lqd-fb-shadow"></div>
+										<div class="flex flex-wrap items-center lqd-overlay perspective backface-hidden"
+											data-hover3d="true">
+											<div class="lqd-fb-content-wrap lqd-overlay will-change-transform transform-style-3d backface-hidden"
+												data-stacking-factor="0.5">
+												<div class="lqd-fb-img lqd-overlay rounded-4 overflow-hidden">
+													<figure class="w-full h-full" data-responsive-bg="true">
+														<img class="h-full object-cover visibility-hidden" width="720"
+															height="813"
+															src="{% static 'assets/images/demo/asymmetric-agency/case-studies/case-studies-row-1.jpg' %}"
+															alt="About">
+													</figure>
+													<div class="lqd-fb-bg lqd-overlay"></div>
+													<div class="lqd-fb-hover-overlay lqd-overlay"></div>
+												</div>
+												<div class="lqd-fb-content lqd-overlay flex items-end">
+													<div class="lqd-fb-content-inner relative w-full py-3rem px-3/5rem">
+														<span class="lqd-fb-icon flex mb-2rem">
+															<i class="lqd-icn-ess icon-lqd-atom"></i>
+														</span>
+														<h6 class="mb-1rem font-bold uppercase ltr-sp-2">FOR DEVELOPERS
+															AND STARTUPS</h6>
+														<h2 class="mb-0 font-bold text-32">Search Engine Opt.</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 col-md-6 col-lg-3 p-0 animation-element">
+								<div class="lqd-fb round h-pt-125 lqd-fb-style-6 relative rounded-4"
+									data-lqd-zindex="true">
+									<div class="lqd-fb-inner lqd-overlay">
+										<div class="lqd-fb-shadow"></div>
+										<div class="flex flex-wrap items-center lqd-overlay perspective backface-hidden"
+											data-hover3d="true">
+											<div class="lqd-fb-content-wrap lqd-overlay will-change-transform transform-style-3d backface-hidden"
+												data-stacking-factor="0.5">
+												<div class="lqd-fb-img lqd-overlay rounded-4 overflow-hidden">
+													<figure class="w-full h-full" data-responsive-bg="true">
+														<img class="h-full object-cover visibility-hidden" width="726"
+															height="817"
+															src="{% static 'assets/images/demo/asymmetric-agency/case-studies/case-studies-row-2.jpg' %}"
+															alt="About">
+													</figure>
+													<div class="lqd-fb-bg lqd-overlay"></div>
+													<div class="lqd-fb-hover-overlay lqd-overlay"></div>
+												</div>
+												<div class="lqd-fb-content lqd-overlay flex items-end">
+													<div class="lqd-fb-content-inner relative w-full py-3rem px-3/5rem">
+														<span class="lqd-fb-icon flex mb-2rem">
+															<i class="lqd-icn-ess icon-lqd-compass"></i>
+														</span>
+														<h6 class="mb-1rem font-bold uppercase ltr-sp-2">FOR DEVELOPERS
+															AND STARTUPS</h6>
+														<h2 class="mb-0 font-bold text-32">Web Development</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 col-md-6 col-lg-3 p-0 animation-element">
+								<div class="lqd-fb round h-pt-125 lqd-fb-style-6 relative rounded-4"
+									data-lqd-zindex="true">
+									<div class="lqd-fb-inner lqd-overlay">
+										<div class="lqd-fb-shadow"></div>
+										<div class="flex flex-wrap items-center lqd-overlay perspective backface-hidden"
+											data-hover3d="true">
+											<div class="lqd-fb-content-wrap lqd-overlay will-change-transform transform-style-3d backface-hidden"
+												data-stacking-factor="0.5">
+												<div class="lqd-fb-img lqd-overlay rounded-4 overflow-hidden">
+													<figure class="w-full h-full" data-responsive-bg="true">
+														<img class="h-full object-cover visibility-hidden" width="722"
+															height="813"
+															src="{% static 'assets/images/demo/asymmetric-agency/case-studies/case-studies-row-3.jpg' %}"
+															alt="About">
+													</figure>
+													<div class="lqd-fb-bg lqd-overlay"></div>
+													<div class="lqd-fb-hover-overlay lqd-overlay"></div>
+												</div>
+												<div class="lqd-fb-content lqd-overlay flex items-end">
+													<div class="lqd-fb-content-inner relative w-full py-3rem px-3/5rem">
+														<span class="lqd-fb-icon flex mb-2rem">
+															<i class="lqd-icn-ess icon-lqd-feather"></i>
+														</span>
+														<h6 class="mb-1rem font-bold uppercase ltr-sp-2">FOR DEVELOPERS
+															AND STARTUPS</h6>
+														<h2 class="mb-0 font-bold text-32">Branding Strategy</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 col-md-6 col-lg-3 p-0 animation-element">
+								<div class="lqd-fb round h-pt-125 lqd-fb-style-6 relative rounded-4"
+									data-lqd-zindex="true">
+									<div class="lqd-fb-inner lqd-overlay">
+										<div class="lqd-fb-shadow"></div>
+										<div class="flex flex-wrap items-center lqd-overlay perspective backface-hidden"
+											data-hover3d="true">
+											<div class="lqd-fb-content-wrap lqd-overlay will-change-transform transform-style-3d backface-hidden"
+												data-stacking-factor="0.5">
+												<div class="lqd-fb-img lqd-overlay rounded-4 overflow-hidden">
+													<figure class="w-full h-full" data-responsive-bg="true">
+														<img class="h-full object-cover visibility-hidden" width="722"
+															height="813"
+															src="{% static 'assets/images/demo/asymmetric-agency/case-studies/case-studies-row-4.jpg' %}"
+															alt="About">
+													</figure>
+													<div class="lqd-fb-bg lqd-overlay"></div>
+													<div class="lqd-fb-hover-overlay lqd-overlay"></div>
+												</div>
+												<div class="lqd-fb-content lqd-overlay flex items-end">
+													<div class="lqd-fb-content-inner relative w-full py-3rem px-3/5rem">
+														<span class="lqd-fb-icon flex mb-2rem">
+															<i class="lqd-icn-ess icon-lqd-smile"></i>
+														</span>
+														<h6 class="mb-1rem font-bold uppercase ltr-sp-2">FOR DEVELOPERS
+															AND STARTUPS</h6>
+														<h2 class="mb-0 font-bold text-32">Motion Design</h2>
 													</div>
 												</div>
 											</div>
@@ -1043,17 +934,373 @@
 							</div>
 						</div>
 					</div>
+				</section> -->
+				<!-- End About Row -->
+
+				<!-- Start Careers -->
+				<!-- <section class="lqd-section careers pt-160 pb-140" data-section-luminosity="light">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12 col-md-6">
+								<div class="lqd-imggrp-single sticky mb-30 module-sticky">
+									<div class="lqd-imggrp-img-container">
+										<figure>
+											<img width="1108" height="1024"
+												src="{% static 'assets/images/demo/asymmetric-agency/case-studies/career-1.jpg' %}"
+												alt="careers">
+										</figure>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 col-md-6 col-xl-5 offset-xl-1">
+								<div class="module-content relative flex flex-col items-start">
+									<p class="ld-fh-element mb-1em text-14 text-black"> Careers</p>
+									<h2 class="ld-fh-element mb-0/4em text-65 leading-0/85em text-black"> Product
+										Strategy</h2>
+									<p class="ld-fh-element mb-2em text-16 leading-1/5em text-black"> Through a deep
+										understanding of our audience’s makeup and motivations, we design digital
+										experiences that connect with people.</p>
+									<div class="w-full relative">
+										<div class="flex flex-wrap -mx-15 mb-50 md:mb-0">
+											<div class="w-50percent px-15 sm:w-full">
+												<div class="one-bullet-list mb-1em">
+													<ul class="reset-ul module-list">
+														<li class="flex items-center mb-0/5em text-black">Web
+															Development</li>
+														<li class="flex items-center mb-0/5em text-black">Brand Strategy
+														</li>
+														<li class="flex items-center mb-0/5em text-black">Art Direction
+														</li>
+														<li class="flex items-center mb-0/5em text-black">Graphic Design
+														</li>
+														<li class="flex items-center mb-0/5em text-black">Print Design
+														</li>
+														<li class="flex items-center mb-0/5em text-black">Motion
+															Graphics</li>
+													</ul>
+												</div>
+											</div>
+											<div class="w-50percent px-15 sm:w-full">
+												<div class="one-bullet-list mb-1em">
+													<ul class="reset-ul module-list">
+														<li class="flex items-center mb-0/5em text-black">Content
+															Management</li>
+														<li class="flex items-center mb-0/5em text-black">Brand Strategy
+														</li>
+														<li class="flex items-center mb-0/5em text-black">WordPress</li>
+														<li class="flex items-center mb-0/5em text-black">SEO Analytics
+														</li>
+														<li class="flex items-center mb-0/5em text-black">Copywriting
+														</li>
+														<li class="flex items-center mb-0/5em text-black">Mobile App
+															Design</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p class="ld-fh-element mb-1em text-14 text-black"> Careers</p>
+									<h2 class="ld-fh-element mb-0/4em text-65 leading-0/85em text-black"> Design Systems
+									</h2>
+									<p class="ld-fh-element mb-2em text-16 leading-1/55em text-black"> As a leading
+										digital agency in Paris, we look to engage with our clients beyond the
+										conventional design and development agency relationship, becoming a partner to
+										the people and companies we work with. We create brand identities, digital
+										experiences, and print materials that communicate clearly achieve marketing
+										goals, and look fantastic.</p>
+									<a href="#"
+										class="btn btn-hover-reveal btn-has-label justify-end overflow-visible pb-20 pl-10 border-left rounded-2 text-13 text-black hover:text-primary">
+										<span class="btn-txt" data-text="Read More">Read More</span>
+										<span class="btn-icon">
+											<i class="lqd-icn-ess icon-md-arrow-forward"></i>
+										</span>
+									</a>
+									<div class="h-70 module-spacer"></div>
+									<p
+										class="ld-fh-element py-5 px-10 mb-1em bg-yellow-500 rounded-100 text-10 uppercase tracking-0/1em leading-1em text-black">
+										How it works</p>
+									<h2 class="ld-fh-element mb-0/4em text-65 leading-0/85em text-black"> International
+										Awards</h2>
+									<p class="ld-fh-element mb-1/2em text-13 uppercase tracking-0/1em text-black"> CSS
+										Design Awards</p>
+									<div class="one-bullet-list mb-1em">
+										<ul class="reset-ul module-list">
+											<li
+												class="flex items-center mb-0/5em text-14 uppercase tracking-0/08em text-black">
+												Site of the Day</li>
+											<li
+												class="flex items-center mb-0/5em text-14 uppercase tracking-0/08em text-black">
+												Honorable Mention</li>
+											<li
+												class="flex items-center mb-0/5em text-14 uppercase tracking-0/08em text-black">
+												CSS Design Awards</li>
+											<li
+												class="flex items-center mb-0/5em text-14 uppercase tracking-0/08em text-black">
+												RedDot Design</li>
+											<li
+												class="flex items-center mb-0/5em text-14 uppercase tracking-0/08em text-black">
+												Site of the Month</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section> -->
+				<!-- End Careers -->
+
+				<!-- Start Process -->
+				<section class="lqd-section process pt-90 pb-120 bg-gray-900" id="process" data-custom-animations="true"
+					data-ca-options='{"triggerHandler":"inview","animationTarget":".animation-element, .iconbox","duration":"1800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"x":30,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"x":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'
+					data-section-luminosity="dark">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12 col-md-6 col-lg-4 col-xl-3 animation-element">
+								<p
+									class="ld-fh-element py-5 px-10 mb-1em bg-yellow-500 rounded-100 text-10 uppercase tracking-0/1em leading-1em text-black">
+									How it works</p>
+								<h2 class="ld-fh-element mb-0/4em text-48 leading-1/1em text-white"> We’re Better.
+									Here’s Why</h2>
+							</div>
+							<div class="col col-12 col-md-6 col-lg-4 self-end animation-element">
+								<p class="ld-fh-element mb-1/25em text-13 leading-1/5em text-white-50">Thrive with our
+									advanced e-commerce ecosystem. Our platform is perfectly aligned to support all
+									e-commerce activities seamlessly.</p>
+							</div>
+							<div class="col col-12 col-lg-8 col-xl-9 offset-lg-4 offset-xl-3 p-0">
+								<div
+									class="container-fluid relative flex flex-col flex-grow-1 justify-end pt-60 module-icon-box">
+									<div class="row">
+										<div class="col col-12 col-md-6 col-lg-4 mb-60 md:mb-0">
+											<div class="iconbox text-left iconbox-heading-sm relative flex-col items-start justify-center mb-2em"
+												data-animate-icon="true"
+												data-plugin-options='{"color":"rgb(255, 255, 255)"}'>
+												<div class="iconbox-icon-wrap">
+													<span class="iconbox-icon-container mb-0/5em text-40 text-white">
+														<i class="lqd-icn-ess icon-lqd-presentation"></i>
+													</span>
+												</div>
+												<div class="contents">
+													<h3 class="mb-5 text-20 leading-1/5em text-white">Data Modification
+													</h3>
+													<p>
+														<span class="text-15 text-gray-400">Our data modification
+															service helps clients modify and create hundreds of
+															"product" descriptions quickly.</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col col-12 col-md-6 col-lg-4 mb-60 md:mb-0">
+											<div class="iconbox text-left iconbox-heading-sm relative flex-col items-start justify-center mb-2em"
+												data-animate-icon="true"
+												data-plugin-options='{"color":"rgb(255, 255, 255)"}'>
+												<div class="iconbox-icon-wrap">
+													<span class="iconbox-icon-container mb-0/5em text-40 text-white">
+														<i class="lqd-icn-ess icon-lqd-cogs"></i>
+													</span>
+												</div>
+												<div class="contents">
+													<h3 class="mb-5 text-20 leading-1/5em text-white">Data
+														Synchronization
+													</h3>
+													<p>
+														<span class="text-15 text-gray-400">Our CMS linking feature
+															allows users to connect their website and synchronize
+															updated information across various platforms.</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col col-12 col-md-6 col-lg-4 mb-60 md:mb-0">
+											<div class="iconbox text-left iconbox-heading-sm relative flex-col items-start justify-center mb-2em"
+												data-animate-icon="true"
+												data-plugin-options='{"color":"rgb(255, 255, 255)"}'>
+												<div class="iconbox-icon-wrap">
+													<span class="iconbox-icon-container mb-0/5em text-40 text-white">
+														<i class="lqd-icn-ess icon-lqd-tools"></i>
+													</span>
+												</div>
+												<div class="contents">
+													<h3 class="mb-5 text-20 leading-1/5em text-white">Inventory Sync
+													</h3>
+													<p>
+														<span class="text-15 text-gray-400">Recognizing the importance
+															of accurate inventory management, we devised a system usable
+															across various platforms.</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col col-12 col-md-6 col-lg-4">
+											<div class=" iconbox text-left iconbox-heading-sm relative flex-col items-start justify-center mb-2em"
+												data-animate-icon="true"
+												data-plugin-options='{"color":"rgb(255, 255, 255)"}'>
+												<div class="iconbox-icon-wrap">
+													<span class="iconbox-icon-container mb-0/5em text-40 text-white">
+														<i class="lqd-icn-ess icon-lqd-mobile"></i>
+													</span>
+												</div>
+												<div class="contents">
+													<h3 class="mb-5 text-20 leading-1/5em text-white">Product Management
+													</h3>
+													<p>
+														<span class="text-15 text-gray-400">Focus on driving sales while
+															we handle product content creation and updates.</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col col-12 col-md-6 col-lg-4">
+											<div class=" iconbox text-left iconbox-heading-sm relative flex-col items-start justify-center mb-2em"
+												data-animate-icon="true"
+												data-plugin-options='{"color":"rgb(255, 255, 255)"}'>
+												<div class="iconbox-icon-wrap">
+													<span class="iconbox-icon-container mb-0/5em text-40 text-white">
+														<i class="lqd-icn-ess icon-lqd-target"></i>
+													</span>
+												</div>
+												<div class="contents">
+													<h3 class="mb-5 text-20 leading-1/5em text-white">SEO Optimized
+													</h3>
+													<p>
+														<span class="text-15 text-gray-400">Craft unique, search
+															engine-friendly product descriptions to enhance search
+															engine visibility.</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col col-12 col-md-6 col-lg-4">
+											<div class=" iconbox text-left iconbox-heading-sm relative flex-col items-start justify-center mb-2em"
+												data-animate-icon="true"
+												data-plugin-options='{"color":"rgb(255, 255, 255)"}'>
+												<div class="iconbox-icon-wrap">
+													<span class="iconbox-icon-container mb-0/5em text-40 text-white">
+														<i class="lqd-icn-ess icon-lqd-path"></i>
+													</span>
+												</div>
+												<div class="contents">
+													<h3 class="mb-5 text-20 leading-1/5em text-white">Global
+														Dropshipping
+													</h3>
+													<p>
+														<span class="text-15 text-gray-400">Join our Marketplace to
+															connect with global merchants, including in the US, EU, and
+															AU, and partner with suppliers from all over.</span>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
-				<!-- End About Accordion -->
+				<!-- End Process -->
+
+				<!-- Start How It Work -->
+				<section class="lqd-section how-it-work py-90" data-custom-animations="true"
+					data-ca-options='{"triggerHandler":"inview","animationTarget":".animation-element","duration":"1800","delay":"180","ease":"power4.out","direction":"forward","initValues":{"y":35,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":0},"animations":{"y":0,"transformOriginX":50,"transformOriginY":50,"transformOriginZ":"0px","opacity":1}}'
+					data-section-luminosity="light">
+					<div class="container">
+						<div class="row justify-between">
+							<!-- <div class="col col-12 col-md-6 col-lg-4 animation-element">
+								<h2 class="ld-fh-element mb-0/5em"> So, how we do it. The process.</h2>
+							</div>
+							<div class="col col-12 col-md-6 col-lg-4 animation-element">
+								<p class="ld-fh-element mb-0/5em text-15 leading-1/3em"> As a leading digital agency in
+									Paris, we look to engage with our clients beyond the conventional design and
+									development agency relationship, becoming a partner to the people and companies we
+									work with.</p>
+							</div> -->
+							<div class="col col-12 animation-element">
+								<div
+									class="w-full relative flex flex-col flex-grow-1 pt-40 pb-10 mb-15 border-bottom border-black">
+									<div class="container-fluid">
+										<div class="row items-center">
+											<div class="col-2 animation-element">
+												<div class="w-50percent relative flex border-top border-black-50"></div>
+											</div>
+											<div class="col-8 animation-element">
+												<h6
+													class="ld-fh-element mb-0/5em text-12 uppercase tracking-0/01em font-normal text-black">
+													The process</h6>
+											</div>
+											<!-- <div
+												class="col col-12 col-md-2 text-end sm:text-start animation-element pr-0">
+												<h6 class="ld-fh-element mb-0/5em text-12 font-normal"> 05</h6>
+											</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 animation-element">
+								<div class="container-fluid py-35 border-bottom border-black-20">
+									<div class="row items-center">
+										<div class="col col-12 col-md-4 animation-element">
+											<h2 class="ld-fh-element mb-0 text-48 font-normal module-title"> Understand
+											</h2>
+										</div>
+										<div class="col col-12 col-md-6 offset-md-2 animation-element">
+											<h4 class="ld-fh-element mb-0/5em text-26 font-normal sm:mb-0">
+												Comprehensive Business Insight</h4>
+											<p class="ld-fh-element mb-0/5em text-15 leading-1/3em"> Collecting details
+												on the client's business, objectives, audience, and competition to
+												pinpoint areas of enhancement.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 animation-element">
+								<div class="container-fluid py-35 border-bottom border-black-20">
+									<div class="row items-center">
+										<div class="col col-12 col-md-4 animation-element">
+											<h2 class="ld-fh-element mb-0 text-48 font-normal module-title"> Design
+											</h2>
+										</div>
+										<div class="col col-12 col-md-6 offset-md-2 animation-element">
+											<h4 class="ld-fh-element mb-0/5em text-26 font-normal sm:mb-0"> Conceptual
+												Development & Feedback</h4>
+											<p class="ld-fh-element mb-0/5em text-15 leading-1/3em"> Crafting a design
+												based on customer insights, followed by presenting to the client for
+												valuable input and revisions.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col col-12 animation-element">
+								<div class="container-fluid py-35 border-bottom border-black-20">
+									<div class="row items-center">
+										<div class="col col-12 col-md-4 animation-element">
+											<h2 class="ld-fh-element mb-0 text-48 font-normal module-title"> Implement
+											</h2>
+										</div>
+										<div class="col col-12 col-md-6 offset-md-2 animation-element">
+											<h4 class="ld-fh-element mb-0/5em text-26 font-normal sm:mb-0"> Creation &
+												Quality Assurance</h4>
+											<p class="ld-fh-element mb-0/5em text-15 leading-1/3em"> Building the
+												website using the finalized concept, leveraging cutting-edge
+												technologies and industry best practices. Conducting thorough system
+												testing.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End How It Work -->
 
 				<!-- Start Contact Info -->
-				<section class="lqd-section contact-info pt-50 pb-80" id="contact" data-section-luminosity="light">
+				<section class="lqd-section contact-info pt-10 pb-80" id="contact" data-section-luminosity="light">
 					<div class="container">
 						<div class="row items-center">
 							<div class="col col-12 col-md-4 col-lg-2 module-content">
 								<p class="ld-fh-element w-full mb-0/3em text-11 leading-1/15em text-black"> Looking for
 									collaboration?</p>
-								<h2 class="ld-fh-element w-full text-18 uppercase"> contact us</h2>
+								<h2 class="ld-fh-element w-full text-18 uppercase"> Contact Us</h2>
 							</div>
 							<div class="col col-12 col-lg-3 md:hidden">
 								<div class="separator w-full flex items-stretch justify-center">
@@ -1063,13 +1310,13 @@
 								</div>
 							</div>
 							<div class="col col-12 col-md-4 col-lg-2 module-content">
-								<p class="ld-fh-element w-full mb-0/75em leading-1/2em text-14 text-black"> P.O. Box
-									15020,
+								<p class="ld-fh-element w-full mb-0/75em leading-1/2em text-14 text-black"> BulqSoft
+									P.O. Box 15020,
 									Amsterdam,
 									Noord-Holland,
 									Amsterdam,
 									1001 MA.</p>
-								<h4 class="ld-fh-element w-full mb-0/3em text-14"> +31 6 41739748</h4>
+								<h4 class="ld-fh-element w-full mb-0/3em text-14"> +31 6 41739748</h4>
 							</div>
 							<div class="col col-12 col-lg-3 md:hidden">
 								<div class="separator w-full flex items-stretch justify-center">
@@ -1081,7 +1328,7 @@
 							<div class="col col-12 col-md-4 col-lg-2">
 								<p class="ld-fh-element w-full mb-0/75em leading-1/2em text-14 text-black"> Looking for
 									a job? Send your resume</p>
-								<h4 class="ld-fh-element w-full mb-0/3em text-14"> careers@bulqsoft.com</h4>
+								<h4 class="ld-fh-element w-full mb-0/3em text-14"> info@bulqsoft.com</h4>
 							</div>
 						</div>
 					</div>
@@ -1091,7 +1338,7 @@
 				<!-- Start Lets Talk -->
 				<section class="lqd-section lets-talk py-130 bg-no-repeat bg-cover bg-center"
 					data-section-luminosity="dark"
-					style="background-image: url({% static 'assets/images/demo/asymmetric-agency/our-approach/lets-talk.jpg' %});">
+					style="background-image: url({% static 'assets/images/demo/asymmetric-agency/case-studies/lets-talk.jpg' %});">
 					<div class="container">
 						<div class="row items-center">
 							<div class="col col-12 col-md-6 sm:text-center">
@@ -1117,7 +1364,7 @@
 
 		<!-- Start Footer -->
 		<footer id="site-footer" class="main-footer bg-gray-800 text-gray-400" data-sticky-footer="true"
-			data-sticky-footer-options='{" shadow":"4"}' data-section-luminosity="dark">
+			data-sticky-footer-options='{"shadow":"4"}' data-section-luminosity="dark">
 			<section class="lqd-section module-middle pt-50" data-section-luminosity="dark">
 				<div class="container">
 					<div class="row items-start">
@@ -1266,7 +1513,7 @@
 			<div class="lqd-modal-head"></div>
 			<section
 				class="lqd-section lqd-modal-content flex items-center link-black bg-center bg-cover bg-norepeat h-100vh py-80 sm:h-auto"
-				style="background-image: url({% static 'assets/images/common/modal-bg..jpeg' %});">
+				style="background-image: url({% static 'assets/images/common/modal-bg.jpeg' %});">
 				<div class="container flex items-center sm:p-0">
 					<div class="row items-center content-center h-full">
 						<div class="col col-12 col-md-6 mb-30">
@@ -1412,7 +1659,7 @@
 	</div>
 	<!-- Contact Modal -->
 
-	<!-- Contact Modal -->
+	<!-- Contact Modal Mini -->
 	<div id="lity-modal-mini" class="lqd-modal lity-hide" data-modal-type="box">
 		<div class="lqd-modal-inner">
 			<div class="lqd-modal-head"></div>
@@ -1465,7 +1712,7 @@
 			<div class="lqd-modal-foot"></div>
 		</div>
 	</div>
-	<!-- Contact Modal -->
+	<!-- Contact Modal Mini -->
 
 	<script src="{% static 'assets/vendors/jquery.min.js' %}"></script>
 	<script src="{% static 'assets/vendors/jquery-ui/jquery-ui.min.js' %}"></script>

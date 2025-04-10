@@ -1,3 +1,4 @@
+{% load cms_tags menu_tags sekizai_tags %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,13 +14,13 @@
 	<meta property="og:description"
 		content="Hub is a HTML template with high performance, and award-winning design collection.">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="./assets/images/common/og-image.jpg">
+	<meta property="og:image" content="{% static 'assets/images/common/og-image.jpg' %}">
 
-	<link rel="stylesheet" href="./assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css">
-	<link rel="stylesheet" href="./assets/css/theme.min.css">
-	<link rel="stylesheet" href="./assets/css/utility.min.css">
-	<link rel="stylesheet" href="./assets/css/demo/asymmetric-agency/base.css">
-	<link rel="stylesheet" href="./assets/css/demo/asymmetric-agency/asymmetric-agency-about-us.css">
+	<link rel="stylesheet" href="{% static 'assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/utility.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/base.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/asymmetric-agency-about-us.css' %}">
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,11 +86,14 @@
 	</Style>
 
 	<title>IntelPIM - BulqSoft</title>
+
+	{% render_block "css" %}
 </head>
 
 <body class="lqd-cc-outer-hidden" data-lqd-cc="true" data-mobile-nav-breakpoint="1199" data-mobile-nav-style="modern"
 	data-mobile-nav-scheme="dark" data-mobile-nav-trigger-alignment="right" data-mobile-header-scheme="gray"
 	data-mobile-logo-alignment="default" data-overlay-onmobile="false">
+	{% cms_toolbar %}
 	<div id="wrap">
 
 		<div class="lqd-sticky-placeholder hidden"></div>
@@ -99,10 +103,10 @@
 				<div class="lqd-head-sec w-full flex items-stretch justify-between">
 					<div class="col lqd-head-col flex-grow-1 justify-start">
 						<div class="header-module module-logo no-rotate navbar-brand-plain py-40">
-							<a class="navbar-brand" href="./index-asymmetric-agency.html" rel="home">
+							<a class="navbar-brand" href="/" rel="home">
 								<span class="navbar-brand-inner">
-									<img class="logo-dark" src="assets/img/bulqsoft-logo.svg" alt="BulqSoft">
-									<img class="logo-default" src="assets/img/bulqsoft-logo-white-01.svg" alt="BulqSoft"
+									<img class="logo-dark" src="{% static 'assets/img/bulqsoft-logo.svg' %}" alt="BulqSoft">
+									<img class="logo-default" src="{% static 'assets/img/bulqsoft-logo-white-01.svg' %}" alt="BulqSoft"
 										width="120">
 								</span>
 							</a>
@@ -115,14 +119,14 @@
 								<ul class="main-nav lqd-menu-counter-right main-nav-hover-default flex reset-ul flex-nowrap items-stretch justify-end link-medium link-white-80"
 									data-submenu-options='{"toggleType" : "fade", "handler" : "mouse-in-out"}'>
 									<li>
-										<a href="index.html">
+										<a href="/">
 											Home
 											<!-- <sup class="link-sup">01</sup> -->
 										</a>
 									</li>
 
 									<li class="dropdown">
-										<a href="./page-asymmetric-agency-our-approach.html">
+										<a href="#">
 											<span>Products</span>
 											<span class="submenu-expander"></span>
 											<span class="link-icon right-icon">
@@ -134,26 +138,26 @@
 												<div class="col-md-4 sub-menu-first-section">
 													<ul>
 														<li>B2B & B2C Commerce</li>
-														<li><a class="dropdown-item" href="bulqe.html">Bulqe</a></li>
-														<li><a class="dropdown-item" href="intelpim.html">Intelpim</a>
+														<li><a class="dropdown-item" href="/bulqe/">Bulqe</a></li>
+														<li><a class="dropdown-item" href="/intelpim/">Intelpim</a>
 														</li>
-														<li><a class="dropdown-item" href="bulqs.html">Bulqs</a></li>
+														<li><a class="dropdown-item" href="/bulqs/">Bulqs</a></li>
 													</ul>
 												</div>
 												<div class="col-md-4 sub-menu-second-section">
 													<ul>
 														<li>Ecommerce Solution</li>
-														<li><a class="dropdown-item" href="idmc.html">IDMC (AI
+														<li><a class="dropdown-item" href="/idmc/">IDMC (AI
 																Solution)</a>
 														</li>
-														<li><a class="dropdown-item" href="adjunqy.html">Adjunqy</a>
+														<li><a class="dropdown-item" href="/adjunqy/">Adjunqy</a>
 														</li>
-														<li><a class="dropdown-item" href="bulqpay.html">BulqPay</a>
+														<li><a class="dropdown-item" href="/bulqpay/">BulqPay</a>
 														</li>
 													</ul>
 												</div>
 												<div class="col-md-4 sub-menu-third-section">
-													<img src="https://bulqsoft.com/assets/img/srvice-menu-ecommerce.jpg"
+													<img src="{% static 'assets/img/srvice-menu-ecommerce.jpg' %}"
 														alt="Description" class="img-fluid">
 												</div>
 											</div>
@@ -161,7 +165,7 @@
 									</li>
 
 									<li class="dropdown">
-										<a href="./page-asymmetric-agency-our-approach.html">
+										<a href="#">
 											<span>Services</span>
 											<span class="submenu-expander"></span>
 											<span class="link-icon right-icon">
@@ -172,25 +176,25 @@
 											<div class="row">
 												<div class="col-md-4 sub-menu-first-section">
 													<ul>
-														<li><a class="dropdown-item" href="pim.html">PIM Solutions</a>
+														<li><a class="dropdown-item" href="/pimsolutionservices/">PIM Solutions</a>
 														</li>
-														<li><a class="dropdown-item" href="erp.html">ERP & CRM
+														<li><a class="dropdown-item" href="/erpandcrmservices/">ERP & CRM
 																Solutions</a>
 														</li>
-														<li><a class="dropdown-item" href="ai.html">AI Integration</a>
+														<li><a class="dropdown-item" href="/ai-integration/">AI Integration</a>
 														</li>
 													</ul>
 												</div>
 												<div class="col-md-4 sub-menu-second-section">
 													<ul>
-														<li><a class="dropdown-item" href="web.html">Web Development</a>
+														<li><a class="dropdown-item" href="/websitedevelopment/">Web Development</a>
 														</li>
-														<li><a class="dropdown-item" href="concept.html">Concept
+														<li><a class="dropdown-item" href="/conceptdesign/">Concept
 																Design</a></li>
 													</ul>
 												</div>
 												<div class="col-md-4 sub-menu-third-section">
-													<img src="https://bulqsoft.com/assets/img/srvice-menu-ecommerce.jpg"
+													<img src="{% static 'assets/img/srvice-menu-ecommerce.jpg' %}"
 														alt="Description" class="img-fluid">
 												</div>
 											</div>
@@ -199,7 +203,7 @@
 
 
 									<li>
-										<a href="./about.html">
+										<a href="/about/">
 											About
 											<!-- <sup class="link-sup">02</sup> -->
 										</a>
@@ -238,12 +242,12 @@
 									<div class="relative flex flex-wrap h-full justify-between -mx-15">
 										<div class="w-full flex flex-auto flex-col items-start justify-start px-15">
 											<div class="header-module module-logo no-rotate navbar-brand-plain py-45">
-												<a class="navbar-brand" href="index.html" rel="home">
+												<a class="navbar-brand" href="/" rel="home">
 													<span class="navbar-brand-inner">
 														<img class="logo-light"
-															src="assets/img/bulqsoft-logo-white-01.svg" alt="BulqSoft"
+															src="{% static 'assets/img/bulqsoft-logo-white-01.svg' %}" alt="BulqSoft"
 															width="120">
-														<img class="logo-default" src="assets/img/bulqsoft-logo.svg"
+														<img class="logo-default" src="{% static 'assets/img/bulqsoft-logo.svg' %}"
 															alt="BulqSoft">
 													</span>
 												</a>
@@ -255,7 +259,7 @@
 													<ul class="reset-ul link-black link-medium">
 														<li class="mb-15">
 															<a class="flex leading-1/5em hover:text-primary"
-																href="index.html" aria-current="page">Home</a>
+																href="/" aria-current="page">Home</a>
 														</li>
 														<li class="mb-15">
 															<a class="flex leading-1/5em hover:text-primary"
@@ -365,7 +369,7 @@
 													<span class="lqd-fullproj-title relative">Royal Airlines
 														<small>Digital</small></span>
 													<span class="lqd-fullproj-media lqd-overlay pointer-events-none">
-														<img src="./assets/images/common/fullscreen-project/project-1.jpeg"
+														<img src="{% static 'assets/images/common/fullscreen-project/project-1.jpeg' %}"
 															alt="Royal Airlines Digital">
 													</span>
 												</a>
@@ -375,7 +379,7 @@
 													<span class="lqd-fullproj-title relative">Kladdin <small>UI
 															Design</small></span>
 													<span class="lqd-fullproj-media lqd-overlay pointer-events-none">
-														<img src="./assets/images/common/fullscreen-project/project-2.jpeg"
+														<img src="{% static 'assets/images/common/fullscreen-project/project-2.jpeg' %}"
 															alt="Kladdin UI Design">
 													</span>
 												</a>
@@ -385,7 +389,7 @@
 													<span class="lqd-fullproj-title relative">Tesla
 														<small>Magazine</small></span>
 													<span class="lqd-fullproj-media lqd-overlay pointer-events-none">
-														<img src="./assets/images/common/fullscreen-project/project-3.jpeg"
+														<img src="{% static 'assets/images/common/fullscreen-project/project-3.jpeg' %}"
 															alt="Tesla Magazine">
 													</span>
 												</a>
@@ -395,7 +399,7 @@
 													<span class="lqd-fullproj-title relative">Skarigem <small>Mobile
 															Application</small></span>
 													<span class="lqd-fullproj-media lqd-overlay pointer-events-none">
-														<img src="./assets/images/common/fullscreen-project/project-4.jpeg"
+														<img src="{% static 'assets/images/common/fullscreen-project/project-4.jpeg' %}"
 															alt="Skarigem Mobile Application">
 													</span>
 												</a>
@@ -405,7 +409,7 @@
 													<span class="lqd-fullproj-title relative">eCommerce
 														<small>Creative</small></span>
 													<span class="lqd-fullproj-media lqd-overlay pointer-events-none">
-														<img src="./assets/images/common/fullscreen-project/project-5.jpeg"
+														<img src="{% static 'assets/images/common/fullscreen-project/project-5.jpeg' %}"
 															alt="eCommerce Creative">
 													</span>
 												</a>
@@ -415,7 +419,7 @@
 													<span class="lqd-fullproj-title relative">ROGER FEDERER
 														<small>Branding</small></span>
 													<span class="lqd-fullproj-media lqd-overlay pointer-events-none">
-														<img src="./assets/images/common/fullscreen-project/project-6.jpeg"
+														<img src="{% static 'assets/images/common/fullscreen-project/project-6.jpeg' %}"
 															alt="ROGER FEDERER Branding">
 													</span>
 												</a>
@@ -425,7 +429,7 @@
 													<span class="lqd-fullproj-title relative">SHOWREEL
 														<small>Strategy</small></span>
 													<span class="lqd-fullproj-media lqd-overlay pointer-events-none">
-														<img src="./assets/images/common/fullscreen-project/project-7.jpeg"
+														<img src="{% static 'assets/images/common/fullscreen-project/project-7.jpeg' %}"
 															alt="SHOWREEL Strategy">
 													</span>
 												</a>
@@ -486,9 +490,9 @@
 							</span>
 						</span>
 					</button>
-					<a class="text-start navbar-brand" href="./index-asymmetric-agency.html">
+					<a class="text-start navbar-brand" href="/">
 						<span class="navbar-brand-inner justify-start">
-							<img class="logo-default" src="assets/img/bulqsoft-logo.svg" alt="BulqSoft">
+							<img class="logo-default" src="{% static 'assets/img/bulqsoft-logo.svg' %}" alt="BulqSoft">
 						</span>
 					</a>
 				</div>
@@ -538,7 +542,7 @@
 		</header>
 
 		<main class="content bg-green-700" id="lqd-site-content"
-			style="background-image: url(./assets/images/demo/asymmetric-agency/bg-lines-light.svg);">
+			style="background-image: url({% static 'assets/images/demo/asymmetric-agency/bg-lines-light.svg' %});">
 			<div id="lqd-contents-wrap">
 
 				<!-- Start Banner -->
@@ -566,7 +570,7 @@
 										data-reveal-options='{"direction" : "lr" , "bgcolor" : "rgb(16, 48, 68)" , "delay" : ""}'>
 										<figure>
 											<img width="2320" height="1198"
-												src="./assets/images/demo/asymmetric-agency/about-us/banner.png"
+												src="{% static 'assets/images/demo/asymmetric-agency/about-us/banner.png' %}"
 												alt="banner">
 										</figure>
 									</div>
@@ -799,7 +803,7 @@
 										data-parallax-options='{"overflowHidden" :true, "ease" : "linear" , "start" : "top bottom"}'>
 										<figure class="w-full">
 											<img width="1778" height="1142"
-												src="./assets/images/demo/asymmetric-agency/about-us/experience-1.png"
+												src="{% static 'assets/images/demo/asymmetric-agency/about-us/experience-1.png' %}"
 												alt="experience">
 										</figure>
 									</div>
@@ -816,7 +820,7 @@
 										data-parallax-options='{"overflowHidden" :true, "ease" : "linear" , "start" : "top bottom"}'>
 										<figure class="w-full">
 											<img width="1256" height="830"
-												src="./assets/images/demo/asymmetric-agency/about-us/experience-2.png"
+												src="{% static 'assets/images/demo/asymmetric-agency/about-us/experience-2.png' %}"
 												alt="experience">
 										</figure>
 									</div>
@@ -974,7 +978,7 @@
 									class="ld-img-hover-opacity w-full relative flex flex-col justify-center py-100 px-15 border-1 border-gray-700">
 									<figure
 										class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-										<img src="./assets/images/demo/asymmetric-agency/about-us/client-1.svg"
+										<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-1.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -984,7 +988,7 @@
 									class="ld-img-hover-opacity w-full relative flex flex-col justify-center py-40 px-15 border-1 border-left-0 border-gray-700 md:border-left sm:border-top-0">
 									<figure
 										class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-										<img src="./assets/images/demo/asymmetric-agency/about-us/client-2.svg"
+										<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-2.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -996,7 +1000,7 @@
 									class="ld-img-hover-opacity w-full relative flex flex-col justify-center py-80 px-15 border-1 border-gray-700 md:border-top-0 md:border-left-0">
 									<figure
 										class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-										<img src="./assets/images/demo/asymmetric-agency/about-us/client-3.svg"
+										<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-3.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -1006,7 +1010,7 @@
 									class="ld-img-hover-opacity w-full relative flex flex-col justify-center py-80 px-15 border-right border-bottom border-gray-700  md:border-left">
 									<figure
 										class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-										<img src="./assets/images/demo/asymmetric-agency/about-us/client-4.svg"
+										<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-4.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -1016,7 +1020,7 @@
 									class="ld-img-hover-opacity w-full relative flex flex-col justify-center py-100 px-15 border-right border-bottom border-gray-700">
 									<figure
 										class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-										<img src="./assets/images/demo/asymmetric-agency/about-us/client-5.svg"
+										<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-5.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -1033,7 +1037,7 @@
 													<div class="carousel-item-content justify-center">
 														<figure
 															class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-															<img src="./assets/images/demo/asymmetric-agency/about-us/client-6.svg"
+															<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-6.svg' %}"
 																alt="clients">
 														</figure>
 													</div>
@@ -1044,7 +1048,7 @@
 													<div class="carousel-item-content justify-center">
 														<figure
 															class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-															<img src="./assets/images/demo/asymmetric-agency/about-us/client-7.svg"
+															<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-7.svg' %}"
 																alt="clients">
 														</figure>
 													</div>
@@ -1059,7 +1063,7 @@
 									class="ld-img-hover-opacity w-full relative flex flex-col justify-center py-80 px-15 border-1 border-top-0 border-gray-700">
 									<figure
 										class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-										<img src="./assets/images/demo/asymmetric-agency/about-us/client-8.svg"
+										<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-8.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -1076,7 +1080,7 @@
 													<div class="carousel-item-content justify-center">
 														<figure
 															class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-															<img src="./assets/images/demo/asymmetric-agency/about-us/client-9.svg"
+															<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-9.svg' %}"
 																alt="clients">
 														</figure>
 													</div>
@@ -1087,7 +1091,7 @@
 													<div class="carousel-item-content justify-center">
 														<figure
 															class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-															<img src="./assets/images/demo/asymmetric-agency/about-us/client-10.svg"
+															<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-10.svg' %}"
 																alt="clients">
 														</figure>
 													</div>
@@ -1102,7 +1106,7 @@
 									class="ld-img-hover-opacity w-full relative flex flex-col justify-center py-80 px-15 border-right border-bottom border-gray-700  md:border-left">
 									<figure
 										class="max-w-full relative inline-flex justify-center vertical-top transition-opacity opacity-40 hover:opacity-100">
-										<img src="./assets/images/demo/asymmetric-agency/about-us/client-11.svg"
+										<img src="{% static 'assets/images/demo/asymmetric-agency/about-us/client-11.svg' %}"
 											alt="clients">
 									</figure>
 								</div>
@@ -1201,7 +1205,7 @@
 									<div class="lqd-imggrp-img-container">
 										<figure>
 											<img width="129" height="20"
-												src="./assets/images/demo/asymmetric-agency/about-us/award-1.png"
+												src="{% static 'assets/images/demo/asymmetric-agency/about-us/award-1.png' %}"
 												alt="awards">
 										</figure>
 									</div>
@@ -1213,7 +1217,7 @@
 									<div class="lqd-imggrp-img-container">
 										<figure>
 											<img width="88" height="26"
-												src="./assets/images/demo/asymmetric-agency/about-us/award-2.png"
+												src="{% static 'assets/images/demo/asymmetric-agency/about-us/award-2.png' %}"
 												alt="awards">
 										</figure>
 									</div>
@@ -1225,7 +1229,7 @@
 									<div class="lqd-imggrp-img-container">
 										<figure>
 											<img width="88" height="26"
-												src="./assets/images/demo/asymmetric-agency/about-us/award-2.png"
+												src="{% static 'assets/images/demo/asymmetric-agency/about-us/award-2.png' %}"
 												alt="awards">
 										</figure>
 									</div>
@@ -1237,7 +1241,7 @@
 									<div class="lqd-imggrp-img-container">
 										<figure>
 											<img width="98" height="98"
-												src="./assets/images/demo/asymmetric-agency/about-us/award-3.png"
+												src="{% static 'assets/images/demo/asymmetric-agency/about-us/award-3.png' %}"
 												alt="awards">
 										</figure>
 									</div>
@@ -1365,7 +1369,7 @@
 										<div class="lqd-imggrp-img-container mb-35">
 											<figure
 												class="max-w-full relative inline-flex flex-grow-1 vertical-top m-0">
-												<img src="assets/img/bulqsoft-logo-white-01.svg" alt="hub logo"
+												<img src="{% static 'assets/img/bulqsoft-logo-white-01.svg' %}" alt="hub logo"
 													width="120">
 											</figure>
 										</div>
@@ -1503,7 +1507,7 @@
 			<div class="lqd-modal-head"></div>
 			<section
 				class="lqd-section lqd-modal-content flex items-center link-black bg-center bg-cover bg-norepeat h-100vh py-80 sm:h-auto"
-				style="background-image: url(./assets/images/common/modal-bg.jpeg);">
+				style="background-image: url({% static 'assets/images/common/modal-bg..jpeg' %});">
 				<div class="container flex items-center sm:p-0">
 					<div class="row items-center content-center h-full">
 						<div class="col col-12 col-md-6 mb-30">
@@ -1523,7 +1527,7 @@
 									<div class="screen-reader-response">
 										<p role="status" aria-live="polite" aria-atomic="true"></p>
 									</div>
-									<form action="./assets/php/mailer.php" method="post" class="lqd-cf-form"
+									<form action="{% static 'assets/php/mailer.php' %}" method="post" class="lqd-cf-form"
 										novalidate="novalidate" data-status="init">
 										<div class="row">
 											<div class="col col-md-6">
@@ -1706,22 +1710,22 @@
 
 
 
-	<script src="./assets/vendors/jquery.min.js"></script>
-	<script src="./assets/vendors/jquery-ui/jquery-ui.min.js"></script>
-	<script src="./assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-	<script src="./assets/vendors/gsap/minified/gsap.min.js"></script>
-	<script src="./assets/vendors/gsap/minified/ScrollTrigger.min.js"></script>
-	<script src="./assets/vendors/gsap/utils/SplitText.min.js"></script>
-	<script src="./assets/vendors/fastdom/fastdom.min.js"></script>
-	<script src="./assets/vendors/isotope/isotope.pkgd.min.js"></script>
-	<script src="./assets/vendors/isotope/packery-mode.pkgd.min.js"></script>
-	<script src="./assets/vendors/flickity/flickity.pkgd.min.js"></script>
-	<script src="./assets/vendors/lity/lity.min.js"></script>
-	<script src="./assets/vendors/particles.min.js"></script>
-	<script src="./assets/vendors/fontfaceobserver.js"></script>
-	<script src="./assets/vendors/tinycolor-min.js"></script>
-	<script src="./assets/js/theme.min.js"></script>
-	<script src="./assets/js/liquid-ajax-contact-form.min.js"></script>
+	<script src="{% static 'assets/vendors/jquery.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/gsap/minified/gsap.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/gsap/minified/ScrollTrigger.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/gsap/utils/SplitText.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/fastdom/fastdom.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/isotope/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/isotope/packery-mode.pkgd.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/flickity/flickity.pkgd.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/lity/lity.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/particles.min.js' %}"></script>
+	<script src="{% static 'assets/vendors/fontfaceobserver.js' %}"></script>
+	<script src="{% static 'assets/vendors/tinycolor-min.js' %}"></script>
+	<script src="{% static 'assets/js/theme.min.js' %}"></script>
+	<script src="{% static 'assets/js/liquid-ajax-contact-form.min.js' %}"></script>
 
 	<!-- Start custom cursor -->
 	<div class="lqd-cc lqd-cc--inner fixed pointer-events-none"></div>
@@ -1800,6 +1804,8 @@
 				data-lity-close>&times;</button>
 		</div>
 	</div>
+
+	{% render_block "js" %}
 </body>
 
 </html>

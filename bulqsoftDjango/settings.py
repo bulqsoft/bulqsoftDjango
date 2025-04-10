@@ -208,7 +208,22 @@ CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('sidebar_right.html', 'Sidebar Right'),
+    ('index.html', "Home"),
+    ('bulqe.html', "Bulqe"),
+    ('idmc.html', "IDMC"),
+    ('intelpim.html', "Intelpim"),
+    ('adjunqy.html', "Adjunqy"),
+    ('bulqs.html', "Bulqs"),
+    ('bulqpay.html', "Bulqpay"),
+    ('pim.html', "PIM Solutions"),
+    ('web.html', "Web Development"),
+    ('erp.html', "ERP Solutions"),
+    ('concept.html', "Concepts Design"),
+    ('ai.html', "AI Integration"),
+    ('about.html', "About Us"),
+    
+
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
