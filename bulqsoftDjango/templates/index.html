@@ -23,7 +23,10 @@
 	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/base.css' %}">
 	<link rel="stylesheet" href="{% static 'assets/css/demo/asymmetric-agency/asymmetric-agency.css' %}">
 
-	<!-- Fonts -->
+	<link rel="icon" type="image/png" href="{% static 'assets/img/favicon-bs.png' %}">
+
+
+<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
@@ -338,16 +341,99 @@
 						<div class="header-module-rotate py-10">
 							<div class="lqd-fancy-menu lqd-menu-td-none">
 								<ul class="reset-ul inline-nav flex -mr-10 -ml-10">
+									<!-- English -->
 									<li class="my-10">
-										<a href="#" target="_blank" data-lqd-interactive-color="true">En.</a>
+									  <form action="{% url 'set_language' %}" method="post">
+										{% csrf_token %}
+										<input type="hidden" name="language" value="en">
+										<input type="hidden" name="next" value="{{ request.path }}">
+										<button type="submit" class="bg-transparent border-0 p-0" style="cursor: pointer;" data-lqd-interactive-color="true">
+										  {% if language_code == 'en' %}
+											<strong>En.</strong>
+										  {% else %}
+											En.
+										  {% endif %}
+										</button>
+									  </form>
 									</li>
+								  
+									<!-- Dutch -->
 									<li class="my-10">
-										<a href="#" target="_blank" data-lqd-interactive-color="true">Nl.</a>
+									  <form action="{% url 'set_language' %}" method="post">
+										{% csrf_token %}
+										<input type="hidden" name="language" value="nl">
+										<input type="hidden" name="next" value="{{ request.path }}">
+										<button type="submit" class="bg-transparent border-0 p-0" style="cursor: pointer;" data-lqd-interactive-color="true">
+										  {% if language_code == 'nl' %}
+											<strong>Nl.</strong>
+										  {% else %}
+											Nl.
+										  {% endif %}
+										</button>
+									  </form>
 									</li>
-									<!-- <li class="my-10">
-										<a href="#" target="_blank" data-lqd-interactive-color="true">Ge.</a>
-									</li> -->
-								</ul>
+								  
+									<!-- Spanish -->
+									<li class="my-10">
+									  <form action="{% url 'set_language' %}" method="post">
+										{% csrf_token %}
+										<input type="hidden" name="language" value="es">
+										<input type="hidden" name="next" value="{{ request.path }}">
+										<button type="submit" class="bg-transparent border-0 p-0" style="cursor: pointer;" data-lqd-interactive-color="true">
+										  {% if language_code == 'es' %}
+											<strong>Es.</strong>
+										  {% else %}
+											Es.
+										  {% endif %}
+										</button>
+									  </form>
+									</li>
+								  
+									<!-- French -->
+									<li class="my-10">
+									  <form action="{% url 'set_language' %}" method="post">
+										{% csrf_token %}
+										<input type="hidden" name="language" value="fr">
+										<input type="hidden" name="next" value="{{ request.path }}">
+										<button type="submit" class="bg-transparent border-0 p-0" style="cursor: pointer;" data-lqd-interactive-color="true">
+										  {% if language_code == 'fr' %}
+											<strong>Fr.</strong>
+										  {% else %}
+											Fr.
+										  {% endif %}
+										</button>
+									  </form>
+									</li>
+								  
+									<!-- Arabic -->
+									<li class="my-10">
+									  <form action="{% url 'set_language' %}" method="post">
+										{% csrf_token %}
+										<input type="hidden" name="language" value="ar">
+										<input type="hidden" name="next" value="{{ request.path }}">
+										<button type="submit" class="bg-transparent border-0 p-0" style="cursor: pointer;" data-lqd-interactive-color="true">
+										  {% if language_code == 'ar' %}
+											<strong>Ar.</strong>
+										  {% else %}
+											Ar.
+										  {% endif %}
+										</button>
+									  </form>
+									</li>
+								  </ul>
+								  
+								  <form id="lang-form" action="{% url 'set_language' %}" method="post" style="display: none;">
+									{% csrf_token %}
+									<input type="hidden" name="language" id="language-input">
+									<input type="hidden" name="next" value="{{ request.path }}">
+								  </form>
+								  
+								  <script>
+									function changeLang(code) {
+									  document.getElementById('language-input').value = code;
+									  document.getElementById('lang-form').submit();
+									}
+								  </script>								
 							</div>
 						</div>
 					</div>

@@ -1,4 +1,5 @@
 import os  # isort:skip
+from django.utils.translation import gettext_lazy as _
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -181,28 +182,57 @@ INSTALLED_APPS = [
     'bulqsoftDjango'
 ]
 
-LANGUAGES = (
-    ## Customize this
-    ('en', gettext('en')),
-)
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('fr', _('French')),
+    ('nl', _('Dutch')),  # Netherlands
+    ('es', _('Spanish')),
+    ('ar', _('Arabic')),
+    # Add other languages as needed
+]
+
 
 CMS_LANGUAGES = {
-    ## Customize this
+    'default': {
+        'fallbacks': ['en'],
+        'hide_untranslated': False,
+    },
     1: [
         {
             'code': 'en',
-            'name': gettext('en'),
-            'redirect_on_fallback': True,
+            'name': _('English'),
             'public': True,
-            'hide_untranslated': False,
+            'redirect_on_fallback': True,
+        },
+        {
+            'code': 'fr',
+            'name': _('French'),
+            'public': True,
+            'redirect_on_fallback': False,
+        },
+        {
+            'code': 'nl',
+            'name': _('Dutch'),
+            'public': True,
+            'redirect_on_fallback': False,
+        },
+        {
+            'code': 'es',
+            'name': _('Spanish'),
+            'public': True,
+            'redirect_on_fallback': False,
+        },
+        {
+            'code': 'ar',
+            'name': _('Arabic'),
+            'public': True,
+            'redirect_on_fallback': False,
         },
     ],
-    'default': {
-        'redirect_on_fallback': True,
-        'public': True,
-        'hide_untranslated': False,
-    },
 }
+
+
 
 CMS_TEMPLATES = (
     ## Customize this
