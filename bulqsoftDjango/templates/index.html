@@ -596,52 +596,10 @@
 					data-section-luminosity="light">
 					<div class="container">
 						<div class="row items-center">
-							<div class="col col-md-2 col-12">
-								<div class="single-image">
-									<figure class="text-center">
-										<img width="80" height="11" src="{% static 'assets/img/bot-idmc-logo.svg' %}" alt="clients">
-									</figure>
-								</div>
-							</div>
-							<div class="col col-md-2 col-12">
-								<div class="single-image px-30">
-									<figure class="text-center">
-										<img width="80" height="11" src="{% static 'assets/img/bulqe-logo-1.svg' %}" alt="clients">
-									</figure>
-								</div>
-							</div>
-							<div class="col col-md-2 col-12">
-								<div class="single-image px-30">
-									<figure class="text-center">
-										<img width="121" height="23" src="{% static 'assets/img/intelpim-logo.svg' %}" alt="clients">
-									</figure>
-								</div>
-							</div>
-							<div class="col col-md-2 col-12">
-								<div class="single-image px-30">
-									<figure class="text-center">
-										<img width="83" height="25" src="{% static 'assets/img/bulqpay-logo-dark-01.svg' %}"
-											alt="clients">
-									</figure>
-								</div>
-							</div>
-							<div class="col col-md-2 col-12">
-								<div class="single-image">
-									<figure class="text-center">
-										<img width="86" height="31"
-											src="{% static 'assets/images/demo/asymmetric-agency/client-yahoo.svg' %}" alt="clients">
-									</figure>
-								</div>
-							</div>
-							<div class="col col-md-2 col-12">
-								<div class="single-image px-30">
-									<figure class="text-center">
-										<img width="85" height="25"
-											src="{% static 'assets/images/demo/asymmetric-agency/client-logitecg-5.svg' %}"
-											alt="clients">
-									</figure>
-								</div>
-							</div>
+							{% block IconRow %}
+							{% placeholder 'Icon Row' %}
+							{% endblock IconRow %}
+							
 						</div>
 					</div>
 				</section>
