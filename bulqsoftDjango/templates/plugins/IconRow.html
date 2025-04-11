@@ -1,9 +1,7 @@
-<html>
-  <div class="col col-md-2 col-12">
-    <div class="single-image {% if instance.is_padded %}px-30{% endif %} ">
-      <figure class="text-center">
-        <img width="{{ instance.width }}" height="{{ instance.height }}" src="{{ instance.svg.url }}" alt="clients" />
-      </figure>
-    </div>
+<div class="col col-md-2 col-12">
+  <div class="single-image {% if instance.is_padded %}px-30{% endif %} ">
+    <figure class="text-center">
+      <img width="{{ instance.width }}" height="{{ instance.height }}" src="{{ instance.svg.url }}" alt="clients" />
+    </figure>
   </div>
-</html>
+</div>

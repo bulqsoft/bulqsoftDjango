@@ -13,3 +13,8 @@ class AttributeItem(CMSPlugin):
     title = models.CharField(max_length=50, default='')
     body = models.CharField(max_length=255, default='')
     icon_class = models.CharField(max_length=50, default='lqd-icn-ess icon-lqd-mobile')
+
+
+class AccordionItem(CMSPlugin):
+    title = models.CharField(max_length=50, default='')
+    body = models.CharField(max_length=255, default='')
