@@ -716,90 +716,11 @@
 					data-custom-animations="true"
 					data-ca-options='{"triggerHandler": "inview", "animationTarget": ".animation-element", "duration": "1000", "delay": "225", "ease": "power4.out", "direction": "forward", "initValues": {"transformOriginX" : 50 , "transformOriginY" : 50 , "transformOriginZ": "0px", "opacity" : 0} , "animations": {"transformOriginX" : 50 , "transformOriginY" : 50 , "transformOriginZ": "0px", "opacity" : 1}}'>
 					<div class="container">
-						<div class="row">
-							<div class="col col-md-6 col-lg-3 col-12">
-								<div
-									class="iconbox mb-30 flex flex-col relative justify-center items-start text-start animation-element">
-									<div class="iconbox-icon-wrap">
-										<span
-											class="iconbox-icon-container mb-30 text-50 leading-1em text-primary transition-all">
-											<i class="lqd-icn-ess icon-lqd-mobile"></i>
-										</span>
-									</div>
-									<div class="contents">
-										<h3 class="text-18 mb-20 leading-1/5em">PIM Solutions
-										</h3>
-										<p class="text-16 text-gray-400 font-medium">
-											<span>We offer a comprehensive product information management solution that
-												helps you manage your product data efficiently.
-
-											</span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col col-md-6 col-lg-3 col-12">
-								<div
-									class="iconbox mb-30 flex flex-col relative justify-center items-start text-start animation-element">
-									<div class="iconbox-icon-wrap">
-										<span
-											class="iconbox-icon-container mb-30 text-50 leading-1em text-primary transition-all">
-											<i class="lqd-icn-ess icon-lqd-path"></i>
-										</span>
-									</div>
-									<div class="contents">
-										<h3 class="text-18 mb-20 leading-1/5em">ERP & CRM Solutions
-										</h3>
-										<p class="text-16 text-gray-400 font-medium">
-											<span>Our team of experts can help you integrate your ERP and CRM systems to
-												improve your business operations.
-
-											</span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col col-md-6 col-lg-3 col-12">
-								<div
-									class="iconbox mb-30 flex flex-col relative justify-center items-start text-start animation-element">
-									<div class="iconbox-icon-wrap">
-										<span
-											class="iconbox-icon-container mb-30 text-50 leading-1em text-primary transition-all">
-											<i class="lqd-icn-ess icon-lqd-target"></i>
-										</span>
-									</div>
-									<div class="contents">
-										<h3 class="text-18 mb-20 leading-1/5em">Website Development
-										</h3>
-										<p class="text-16 text-gray-400 font-medium">
-											<span>We offer custom website development services to help you create the
-												perfect website for your business.
-
-											</span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col col-md-6 col-lg-3 col-12">
-								<div class="iconbox flex flex-col relative justify-center items-start text-start">
-									<div class="iconbox-icon-wrap">
-										<span
-											class="iconbox-icon-container mb-30 text-50 leading-1em text-primary transition-all">
-											<i class="lqd-icn-ess icon-lqd-presentation"></i>
-										</span>
-									</div>
-									<div class="contents">
-										<h3 class="text-18 mb-20 leading-1/5em">Concept
-											Design</h3>
-										<p class="text-16 text-gray-400 font-medium">
-											<span>Our design team can help you create a concept design for your next
-												project and bring your ideas to life.
-
-											</span>
-										</p>
-									</div>
-								</div>
-							</div>
+						<div class="row justify-center">
+							{% block AttributeItems %}
+							{% placeholder "AttributeItems" %}
+							{% endblock AttributeItems %}
+							
 						</div>
 					</div>
 				</section>
