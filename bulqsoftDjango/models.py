@@ -58,3 +58,32 @@ class BannerSlide(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+
+
+
+
+class Integration(CMSPlugin):
+    title = models.CharField(max_length=255, default="Integration")
+    subtitle = models.CharField(max_length=255, default="We collaborate with Top E-Commerce CMS in the World")
+
+    def copy_relations(self, oldinstance):
+        for integration in oldinstance.integrations.all():
+            integration.pk = None
+            integration.Integration = self
+            integration.save()
+    
+    def shown(self):
+        return Integrations.objects.filter(Integration=self, shown=True)
+    
+class Integrations(models.Model):
+    title = models.CharField(max_length=255)
+    subtitle = models.CharField(max_length=255)
+    image = FilerImageField(on_delete=models.CASCADE, related_name='integration_images', blank=True, null=True)
+    image_height = models.IntegerField(default=1000)
+    image_width = models.IntegerField(default=720)
+    Integration = models.ForeignKey(Integration, related_name='integration', on_delete=models.CASCADE, null=True)
+    shown = models.BooleanField(default=True)
+    link = models.CharField(max_length=2550, default='#')
+

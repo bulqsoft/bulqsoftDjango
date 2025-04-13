@@ -59,3 +59,19 @@ class BannerSliderPlugin(CMSPluginBase):
     render_template = "plugins/BannerSlider.html"
     inlines = [BannerSlideInline]
     allow_children = False
+
+
+
+
+class IntegrationsInline(admin.StackedInline):
+    model = Integrations
+    extra = 1
+
+
+@plugin_pool.register_plugin
+class IntegrationPlugin(CMSPluginBase):
+    model = Integration
+    name = _("Integration Plugin")
+    render_template = "plugins/Integration.html"
+    inlines = [IntegrationsInline]
+    allow_children = False
