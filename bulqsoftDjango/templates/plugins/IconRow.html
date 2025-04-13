@@ -1,7 +1,15 @@
-<div class="col col-md-2 col-12">
-  <div class="single-image {% if instance.is_padded %}px-30{% endif %} ">
-    <figure class="text-center">
-      <img width="{{ instance.width }}" height="{{ instance.height }}" src="{{ instance.svg.url }}" alt="clients" />
-    </figure>
+<section class="lqd-section clients mb-60 py-55 border-right border-bottom border-left border-black-10 transition-all md:hidden" data-section-luminosity="light">
+  <div class="container">
+    <div class="row items-center">
+      {% for icon in instance.shown %}
+        <div class="col col-md-2 col-12">
+          <div class="single-image {% if icon.is_padded %}px-30{% endif %} ">
+            <figure class="text-center">
+              <img width="{{ icon.width }}" height="{{ icon.height }}" src="{{ icon.svg.url }}" alt="clients" />
+            </figure>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>

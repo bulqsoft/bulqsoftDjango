@@ -7,21 +7,21 @@ from .models import *
 from django.utils.functional import cached_property
 from django.contrib import admin
 
+
+
+
+class IconInline(admin.StackedInline):
+    model = Icon
+    extra = 1
+    max_num = 6
 @plugin_pool.register_plugin
 class IconRowPlugin(CMSPluginBase):
     model = IconRow
+    name = _("Icon Row")
     render_template = "plugins/IconRow.html"
-    cache = False
+    inlines = [IconInline]
+    allow_children = False
 
-    def save_model(self, request, obj, form, change):
-        placeholder = obj.placeholder
-        if placeholder:
-            count = placeholder.get_plugins().filter(plugin_type=self.__class__.__name__).count()
-            if obj.pk:  # if editing, exclude this instance
-                count -= 1
-            if count >= 6:
-                raise ValidationError(f"You can only add 6 plugins to {self.name}")
-        super().save_model(request, obj, form, change)
 
 
 

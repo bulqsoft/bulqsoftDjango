@@ -4,11 +4,26 @@ from filer.fields.image import FilerImageField
 
 from django.db import models
 
+
 class IconRow(CMSPlugin):
+    def copy_relations(self, oldinstance):
+        for icon in oldinstance.icons.all():
+            icon.pk = None
+            icon.icon_row = self
+            icon.save()
+    
+    def shown(self):
+        return Icon.objects.filter(icon_row=self, shown=True)
+    
+class Icon(models.Model):
     svg = models.FileField(upload_to='icons/')
     width = models.IntegerField(default=80)
     height = models.IntegerField(default=11)
     is_padded = models.BooleanField(default=True)
+    shown = models.BooleanField(default=True)
+    icon_row = models.ForeignKey(IconRow, related_name='icons', on_delete=models.CASCADE)
+
+
 
 
 class AttributeItem(CMSPlugin):

@@ -13,15 +13,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='IconRow',
-            fields=[
-                ('cmsplugin_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, related_name='bulqsoftdjango_iconrow', serialize=False, to='cms.cmsplugin')),
-                ('svg', models.FileField(upload_to='icons/')),
-            ],
-            options={
-                'abstract': False,
-            },
-            bases=('cms.cmsplugin',),
-        ),
+       
     ]

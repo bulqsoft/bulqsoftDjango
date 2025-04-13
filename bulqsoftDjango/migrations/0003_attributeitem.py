@@ -7,8 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cms', '0022_auto_20180620_1551'),
-        ('bulqsoftDjango', '0002_auto_20250410_1815'),
+        ('bulqsoftDjango', '0001_initial'),
     ]
 
     operations = [
