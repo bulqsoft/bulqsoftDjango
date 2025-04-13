@@ -1,0 +1,57 @@
+<section id="banner" class="lqd-section banner ml-125 lg:m-0" data-section-luminosity="dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-12 p-0">
+                <div class="lqd-vslider">
+                    <div class="lqd-vslider-scrn overflow-hidden w-full relative bg-black"
+                        data-lqd-slideshow="true" data-inview="true">
+                        <span
+                            class="lqd-vslider-loader inline-flex absolute z-3 w-60 h-60 top-2/5em right-285em rounded-6 items-center justify-center opacity-0 bg-black-60 transition-all">
+                            <span
+                                class="inline-flex rounded-full w-35 h-35 border-3 border-white"></span>
+                        </span>
+                        <div class="lqd-vslider-scrn-inner relative overflow-hidden h-full">
+                            <div class="lqd-vslider-ext absolute top-0 left-0 w-full px-3rem md:px-0">
+                                <ul class="w-full reset-ul relative">
+                                    {% for slide in instance.shown %}
+                                        <li class="w-70percent z-3 pt-4rem px-4rem mt-1/5rem absolute top-0 left-0 opacity-0 pointer-events-none md:m-0 md:px-15">
+                                            
+                                            <div class="ld-fancy-heading mb-0/15em">
+                                                <h2 class="ld-fh-element text-80 text-white h1"
+                                                    data-split-text="true"
+                                                    data-split-options='{"type": "lines"}'>{{ slide.title }}</h2>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                   
+                                </ul>
+                            </div>
+                            <div class="lqd-vslider-images w-full h-full z-0 absolute top-0 left-0">
+                                {% for slide in instance.shown %}
+                                <figure class="absolute overflow-hidden">
+                                    <img class="absolute top-0 left-0 w-full h-full object-cover object-center"
+                                    src="{{ slide.image.url }}" alt="{{ slide.label }}">
+                                </figure>
+                                {% endfor %}
+                            </div>
+                            <div
+                                class="lqd-vslider-menu w-full h-full z-2 absolute top-0 left-0 leading-1/5em text-center">
+                                <ul
+                                    class="reset-ul flex flex-col w-full h-full text-vertical absolute top-0 left-0">
+                                    {% for slide in instance.shown %}
+                                    <li class="flex items-end p-3/5rem relative m-0 opacity-0 transition-all border-right border-white-20 text-18 module-item module-item-{{ slide.id }}">
+                                        <a class="lqd-webgl-slideshow-link text-white" href="#">
+                                            <span class="inline-flex">{{ slide.label }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                  
+                            </div>
+                        </div>
+                    </div>
+                    <span class="lqd-extra-cursor fixed pointer-events-none"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

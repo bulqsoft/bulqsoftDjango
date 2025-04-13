@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
 from .models import *
 from django.utils.functional import cached_property
+from django.contrib import admin
 
 @plugin_pool.register_plugin
 class IconRowPlugin(CMSPluginBase):
@@ -43,3 +44,18 @@ class AccordionItemPlugin(CMSPluginBase):
         context['is_first'] = instance.id == first_id
         context['instance'] = instance
         return context
+    
+
+
+class BannerSlideInline(admin.StackedInline):
+    model = BannerSlide
+    extra = 1
+
+
+@plugin_pool.register_plugin
+class BannerSliderPlugin(CMSPluginBase):
+    model = BannerSlider
+    name = _("Banner Slider")
+    render_template = "plugins/BannerSlider.html"
+    inlines = [BannerSlideInline]
+    allow_children = False
