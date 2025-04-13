@@ -8,8 +8,8 @@ from django.db import models
 class IconRow(CMSPlugin):
     def copy_relations(self, oldinstance):
         for icon in oldinstance.icons.all():
-            icon.pk = None  # Create a new DB row
-            icon.icon_row = self  # Point to the new IconRow instance
+            icon.pk = None
+            icon.icon_row = self
             icon.save()
 
     def shown(self):
@@ -40,7 +40,7 @@ class AccordionItem(CMSPlugin):
 
 class BannerSlider(CMSPlugin):
     def copy_relations(self, oldinstance):
-        for slide in oldinstance.slides.all():  # uses related_name='slides'
+        for slide in oldinstance.slides.all():
             slide.pk = None
             slide.slider = self
             slide.save()
@@ -69,9 +69,9 @@ class Integration(CMSPlugin):
     subtitle = models.CharField(max_length=255, default="We collaborate with Top E-Commerce CMS in the World")
 
     def copy_relations(self, oldinstance):
-        for integration in oldinstance.integration.all():  # using related_name
-            integration.pk = None  # duplicate
-            integration.Integration = self  # assign new parent
+        for integration in oldinstance.integration.all():
+            integration.pk = None
+            integration.Integration = self
             integration.save()
 
     def shown(self):
@@ -87,3 +87,21 @@ class Integrations(models.Model):
     shown = models.BooleanField(default=True)
     link = models.CharField(max_length=2550, default='#')
 
+
+class StepContainer(CMSPlugin):
+    def copy_relations(self, oldinstance):
+        for step in oldinstance.steps.all():
+            step.pk = None
+            step.container = self
+            step.save()
+
+    def shown(self):
+        return self.steps.filter(shown=True) 
+    
+
+class Step(models.Model):
+    title = models.CharField(max_length=255)
+    title_line_2 = models.CharField(max_length=255, blank=True, null=True)
+    body = models.CharField(max_length=2550)
+    container = models.ForeignKey(StepContainer, related_name='steps', on_delete=models.CASCADE, null=True)
+    shown = models.BooleanField(default=True)

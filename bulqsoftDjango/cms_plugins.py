@@ -75,3 +75,20 @@ class IntegrationPlugin(CMSPluginBase):
     render_template = "plugins/Integration.html"
     inlines = [IntegrationsInline]
     allow_children = False
+
+
+
+
+class StepInline(admin.StackedInline):
+    model = Step
+    extra = 1
+    max_num = 3
+
+
+@plugin_pool.register_plugin
+class StepContainer(CMSPluginBase):
+    model = StepContainer
+    name = _("Step Plugin")
+    render_template = "plugins/StepContainer.html"
+    inlines = [StepInline]
+    allow_children = False
