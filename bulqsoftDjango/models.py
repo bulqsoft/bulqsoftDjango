@@ -8,12 +8,12 @@ from django.db import models
 class IconRow(CMSPlugin):
     def copy_relations(self, oldinstance):
         for icon in oldinstance.icons.all():
-            icon.pk = None
-            icon.icon_row = self
+            icon.pk = None  # Create a new DB row
+            icon.icon_row = self  # Point to the new IconRow instance
             icon.save()
-    
+
     def shown(self):
-        return Icon.objects.filter(icon_row=self, shown=True)
+        return self.icons.filter(shown=True)
     
 class Icon(models.Model):
     svg = models.FileField(upload_to='icons/')
@@ -40,13 +40,13 @@ class AccordionItem(CMSPlugin):
 
 class BannerSlider(CMSPlugin):
     def copy_relations(self, oldinstance):
-        for slide in oldinstance.slides.all():
+        for slide in oldinstance.slides.all():  # uses related_name='slides'
             slide.pk = None
             slide.slider = self
             slide.save()
-    
+
     def shown(self):
-        return BannerSlide.objects.filter(slider=self, shown=True)
+        return self.slides.filter(shown=True)
 
 
 class BannerSlide(models.Model):
@@ -69,13 +69,13 @@ class Integration(CMSPlugin):
     subtitle = models.CharField(max_length=255, default="We collaborate with Top E-Commerce CMS in the World")
 
     def copy_relations(self, oldinstance):
-        for integration in oldinstance.integrations.all():
-            integration.pk = None
-            integration.Integration = self
+        for integration in oldinstance.integration.all():  # using related_name
+            integration.pk = None  # duplicate
+            integration.Integration = self  # assign new parent
             integration.save()
-    
+
     def shown(self):
-        return Integrations.objects.filter(Integration=self, shown=True)
+        return self.integration.filter(shown=True) 
     
 class Integrations(models.Model):
     title = models.CharField(max_length=255)
