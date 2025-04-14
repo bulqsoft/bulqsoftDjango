@@ -26,15 +26,42 @@ class Icon(models.Model):
 
 
 
-class AttributeItem(CMSPlugin):
+class Attribute(CMSPlugin):
+    title = models.CharField(max_length=50, default='')
+    body = models.CharField(max_length=255, default='')
+
+    def copy_relations(self, oldinstance):
+        for item in oldinstance.attributeitems.all():
+            item.pk = None
+            item.attribute = self
+            item.save()
+
+    def shown(self):
+        return self.attributeitems.filter(shown=True)
+
+class AttributeItem(models.Model):
     title = models.CharField(max_length=50, default='')
     body = models.CharField(max_length=255, default='')
     icon_class = models.CharField(max_length=50, default='lqd-icn-ess icon-lqd-mobile')
+    attribute = models.ForeignKey(Attribute, related_name='attributeitems', on_delete=models.CASCADE)
 
 
-class AccordionItem(CMSPlugin):
+
+class Accordion(CMSPlugin):
+    def copy_relations(self, oldinstance):
+        for item in oldinstance.accordionitems.all():
+            item.pk = None
+            item.accordion = self
+            item.save()
+
+    def shown(self):
+        return self.accordionitems.filter(shown=True)
+
+class AccordionItem(models.Model):
     title = models.CharField(max_length=50, default='')
     body = models.CharField(max_length=255, default='')
+    shown = models.BooleanField(default=True)
+    accordion = models.ForeignKey(Accordion, related_name='accordionitems', on_delete=models.CASCADE)
 
 
 

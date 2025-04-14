@@ -548,114 +548,18 @@
 					
 				<!-- End Clients -->
 
-				<!-- Start Text Box Single -->
-				<section class="lqd-section text-box-single mt-90" data-section-luminosity="light">
-					<div class="container px-15">
-						<div class="row">
-							<div class="col col-12 col-md-8">
-								<div class="ld-fancy-heading">
-									<h1 class="ld-fh-element mb-0/75em text-50 -tracking-0/5">Pioneering Tomorrow's Software Today</h1>
-								</div>
-								<div class="ld-fancy-heading">
-									<p class="ld-fh-element mb-0/5em leading-1/5em text-20 pr-10percent md:pr-0">The
-										Most Important Attributes That Differentiates Us From Others.
+				
 
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End Text Box Single -->
-
-				<!-- Start Icon Box Text -->
-				<section class="lqd-section icon-box-text py-40" data-section-luminosity="light"
-					data-custom-animations="true"
-					data-ca-options='{"triggerHandler": "inview", "animationTarget": ".animation-element", "duration": "1000", "delay": "225", "ease": "power4.out", "direction": "forward", "initValues": {"transformOriginX" : 50 , "transformOriginY" : 50 , "transformOriginZ": "0px", "opacity" : 0} , "animations": {"transformOriginX" : 50 , "transformOriginY" : 50 , "transformOriginZ": "0px", "opacity" : 1}}'>
-					<div class="container">
-						<div class="row justify-center">
-							{% block AttributeItems %}
-							{% placeholder "AttributeItems" %}
-							{% endblock AttributeItems %}
-							
-						</div>
-					</div>
-				</section>
-				<!-- End Icon Box Text -->
+				{% block Attributes %}
+				{% placeholder "Attributes" %}
+				{% endblock Attributes %}
 
 				<!-- Start FAQ -->
-				<section class="lqd-section faq py-80" data-section-luminosity="light">
-					<div class="container-fluid">
-						<div class="row items-start">
-							<div class="col col-md-12 col-lg-7 col-xl-6 p-0 sticky top-30">
-								<div class="lqd-imggrp-single">
-									<div class="lqd-imggrp-img-container relative">
-										<div class="lqd-imggrp-content lqd-imggrp-content-mid w-95 absolute-center">
-											<div class="lqd-imggrp-content-inner">
-												<a href="https://www.youtube.com/watch?v=WaSvMAl4zPw"
-													class="btn btn-naked fresco btn-icon-block btn-icon-top btn-icon-xl btn-icon-circle btn-icon-bordered btn-icon-ripple text-white">
-													<span
-														class="inline-flex items-center py-1/15em px-2/1em transition-all">
-														<span
-															class="translate-0 text-white text-26 border-white btn-icon">
-															<i class="lqd-icn-ess"></i>
-														</span>
-													</span>
-												</a>
-											</div>
-										</div>
-										<div
-											class="lqd-imggrp-content lqd-imggrp-content-fixed-right lqd-imggrp-content-fixed-in h-45percent absolute flex justify-start justify-start bg-white vertical-lr right-0 bottom-0 text-black">
-											<p class="m-0">Let's chat</p>
-										</div>
-										<figure>
-											<img width="1283" height="979" src="{% static 'assets/img/faq-homepage.jpg' %}"
-												alt="video cover">
-										</figure>
-										<div class="lqd-v-lines lqd-overlay flex flex justify-center">
-											<span class="lqd-v-line flex flex-grow-1 justify-start">
-												<span class="bg-white-40 w-1 h-full"></span>
-											</span>
-											<span class="lqd-v-line flex flex-grow-1 justify-start">
-												<span class="bg-white-40 w-1 h-full"></span>
-											</span>
-											<span class="lqd-v-line flex flex-grow-1 justify-start">
-												<span class="bg-white-40 w-1 h-full"></span>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col col-md-12 col-lg-5 col-xl-4 offset-xl-1 p-0">
-								<div class="flex flex-col pr-30 pl-5percent module-col">
-									<div class="ld-fancy-heading module-text">
-										<h6 class="ld-fh-element mb-1em mb-2/75em">— One Platform Unites All</h6>
-									</div>
-									<div class="ld-fancy-heading">
-										<h3 class="ld-fh-element mb-1/5em is-in-view" data-inview="true"
-											data-transition-delay="true"
-											data-delay-options='{"elements": ".lqd-highlight-inner", "delayType": "transition"}'>
-											<span>Join Game Changing Store Management</span>
-											<mark class="lqd-highlight">
-												<span class="lqd-highlight-txt">Ecosystem</span>
-												<span class="lqd-highlight-inner left-0 bottom-0 bg-slate-300"></span>
-											</mark>
-											<span>by Bulqsoft</span>
-										</h3>
-									</div>
-									<div class="accordion accordion-lg accordion-title-underlined accordion-expander-lg accordion-wrap mb-2em link-black"
-										id="accordion-wrap" role="tabpanel">
-										{% block AccordionItems %}
-										{% placeholder "AccordionItems" %}
-										{% endblock AccordionItems %}
-							
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+				
+
+				{% block AccordionItems %}
+				{% placeholder "AccordionItems" %}
+				{% endblock AccordionItems %}
 				<!-- End FAQ -->
 
 				<!-- Start Text Box Number -->

@@ -25,26 +25,29 @@ class IconRowPlugin(CMSPluginBase):
 
 
 
-@plugin_pool.register_plugin
-class AttributeItemPlugin(CMSPluginBase):
+class AttributeInline(admin.StackedInline):
     model = AttributeItem
-    render_template = "plugins/AttributeItem.html"
-    cache = False
-
-
-
+    extra = 1
 @plugin_pool.register_plugin
-class AccordionItemPlugin(CMSPluginBase):
-    model = AccordionItem
-    render_template = "plugins/AccordionItem.html"
-    cache = False
+class AttributePlugin(CMSPluginBase):
+    model = Attribute
+    name = _("Attribute")
+    render_template = "plugins/Attribute.html"
+    inlines = [AttributeInline]
+    allow_children = False
 
-    def render(self, context, instance, placeholder):
-        first_id = AccordionItem.objects.order_by('id').values_list('id', flat=True).first()
-        context['is_first'] = instance.id == first_id
-        context['instance'] = instance
-        return context
-    
+
+
+class AccordionInline(admin.StackedInline):
+    model = AccordionItem
+    extra = 1
+@plugin_pool.register_plugin
+class AccordionPlugin(CMSPluginBase):
+    model = Accordion
+    name = _("Accordion")
+    render_template = "plugins/Accordion.html"
+    inlines = [AccordionInline]
+    allow_children = False
 
 
 class BannerSlideInline(admin.StackedInline):
