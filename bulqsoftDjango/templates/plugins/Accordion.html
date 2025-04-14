@@ -24,7 +24,7 @@
               <p class="m-0">{{ instance.image_label }}</p>
             </div>
             <figure>
-              <img width="1283" height="979" src="{% static 'assets/img/faq-homepage.jpg' %}"
+              <img width="{{ instance.image_width }}" height="{{ instance.image_height }}" src="{{ instance.image.url }}"
                 alt="video cover">
             </figure>
             <div class="lqd-v-lines lqd-overlay flex flex justify-center">

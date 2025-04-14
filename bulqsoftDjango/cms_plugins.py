@@ -95,3 +95,14 @@ class StepContainer(CMSPluginBase):
     render_template = "plugins/StepContainer.html"
     inlines = [StepInline]
     allow_children = False
+
+
+
+
+@plugin_pool.register_plugin
+class BananaBanner(CMSPluginBase):
+    model = BananaBanner
+    name = _("Banana Banner")
+    render_template = "plugins/BananaBanner.html"
+    allow_children = False
+    cache= False

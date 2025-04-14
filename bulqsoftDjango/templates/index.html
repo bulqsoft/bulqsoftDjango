@@ -569,45 +569,9 @@
 				<!-- End Text Box Number -->
 
 				<!-- Start Bananas Banner -->
-				<section class="lqd-section bananas-banner mt-100 md:hidden md:mt-0" data-section-luminosity="light">
-					<div class="container">
-						<div class="row">
-							<div class="col col-lg-12">
-								<div class="lqd-bnr-bnns text-center relative">
-									<div class="lqd-bnr-bnns-inner flex-wrap lqd-overlay flex">
-										<div class="lqd-bnr-bnns-h-wrap lqd-bnr-bnns-h-wrap-first w-full"
-											data-parallax="true" data-parallax-from='{"opacity" : 0 , "y" : 100}'
-											data-parallax-to='{"opacity" : 1, "y" : 0}'
-											data-parallax-options='{"addWillChange": true, "start": "top top", "end": "+=60%"}'>
-											<h2 class="lqd-bnr-bnns-h">for your business.</h2>
-										</div>
-										<div class="fullwidth absolute h-full">
-											<div
-												class="lqd-bnr-bnns-media fullwidth h-vh-100 lqd-css-sticky module-sticky">
-												<div class="lqd-bnr-media-inner" data-parallax="true"
-													data-parallax-from='{"scale" : 1, "y" : 0}'
-													data-parallax-to='{"scale" : 0.75, "y" : 100}'
-													data-parallax-options='{"addWillChange": true, "start": "top top", "end": "+=50%"}'>
-													<figure>
-														<img width="2080" height="1123"
-															src="{% static 'assets/images/demo/asymmetric-agency/scroll-banana.jpeg' %}"
-															alt="bananas banner">
-													</figure>
-												</div>
-											</div>
-										</div>
-										<div class="lqd-bnr-bnns-h-wrap lqd-bnr-bnns-h-wrap-last flex items-center justify-center h-vh-100 lqd-css-sticky text-center w-full"
-											data-parallax="true" data-parallax-from='{"opacity" : 1, "y" : 0}'
-											data-parallax-to='{"opacity" : 0 , "y" : 150}'
-											data-parallax-options='{"addWillChange": true, "start": "top top", "end": "+=50%"}'>
-											<h2 class="m-0 lqd-bnr-bnns-h-inner">All in one<Br>Services.</h2>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+				{% block BananaBanner %}
+					{% placeholder "Banana Banner" %}
+				{% endblock BananaBanner %}
 				<!-- End Bananas Banner -->
 
 				<!-- Start Carousel Text -->

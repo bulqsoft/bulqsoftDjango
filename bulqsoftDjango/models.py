@@ -27,8 +27,8 @@ class Icon(models.Model):
 
 
 class Attribute(CMSPlugin):
-    title = models.CharField(max_length=50, default='')
-    body = models.CharField(max_length=255, default='')
+    title = models.CharField(max_length=50, default='Pioneering Tomorrow\'s Software Today')
+    body = models.CharField(max_length=255, default='The Most Important Attributes That Differentiates Us From Others.')
 
     def copy_relations(self, oldinstance):
         for item in oldinstance.attributeitems.all():
@@ -48,6 +48,14 @@ class AttributeItem(models.Model):
 
 
 class Accordion(CMSPlugin):
+    image = FilerImageField(on_delete=models.CASCADE, related_name='accordion_images', blank=True, null=True)
+    image_height = models.IntegerField(default=979)
+    image_width = models.IntegerField(default=1283)
+    image_label = models.CharField(max_length=20, default='Lets\'s chat')
+    label = models.CharField(max_length=20, default='ONE PLATFORM UNITES ALL')
+    title = models.CharField(max_length=255, default='Join Game Changing Store Management')
+    highlighted_title = models.CharField(max_length=255, default='Ecosystem')
+    title_post_highlight = models.CharField(max_length=255, default='by Bulqsoft')
     def copy_relations(self, oldinstance):
         for item in oldinstance.accordionitems.all():
             item.pk = None
@@ -132,3 +140,14 @@ class Step(models.Model):
     body = models.CharField(max_length=2550)
     container = models.ForeignKey(StepContainer, related_name='steps', on_delete=models.CASCADE, null=True)
     shown = models.BooleanField(default=True)
+
+
+
+
+class BananaBanner(CMSPlugin):
+    back_text = models.CharField(max_length=255)
+    front_text = models.CharField(max_length=255)
+    front_text2 = models.CharField(max_length=255)
+    image = FilerImageField(on_delete=models.CASCADE, related_name='banana_images', blank=True, null=True)
+    image_height = models.IntegerField(default=1123)
+    image_width = models.IntegerField(default=2080)
